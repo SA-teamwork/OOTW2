@@ -1,0 +1,31 @@
+#import: Unit
+[Unit]<:-[Player|
+  - observers: List<PlayerMoveObserver>
+  - attackObservers: List<PlayerAttackObserver>
+  - chatObservers: List<PlayerChatObserver>
+  - itemsmap: LinkedHashMap<String, Item>
+  - rd: Random
+  |
+  + Player(String image_path, double posx, double posy, int MAX_HP, int attack, int + CoolDown, long resurgence)
+  + Player(String image_path, int tw, int th, double posx, double posy, int MAX_HP, + int attack, int CoolDown, long resurgence)
+  + isElixir(): boolean 
+  + addMoveObserver(PlayerMoveObserver observer): void
+  + deleteMoveObserver(PlayerMoveObserver observer): void
+  + notifyObservers(double posx, double posy, double delta): void
+  + getItems(): LinkedHashMap<String, Item> 
+  + getItem(String itemName): Item 
+  + putItem(Item item): void 
+  + removeItem(String itemname): void 
+  + attack(int dir_x, int dir_y, int delta): void 
+  + openChat(int delta): void 
+  + handleAttack(int dir_x, int dir_y, double posx, double posy, double delta, int : + void attackValue)
+  + move(World world, double dir_x, double dir_y, double delta): void 
+  + update(World world, int dir_x, int dir_y, int delta): void 
+  + comeBack(): void 
+  + addAttackObserver(PlayerAttackObserver observer): void 
+  + delAttackObserver(PlayerAttackObserver observer): void 
+  + notifyAttackObservers(int dir_x, int dir_y, double posx, double posy, double : + void delta, int attackValue)
+  + addChatObserver(PlayerChatObserver observer): void 
+  + deleteChatObserver(PlayerChatObserver observer): void 
+  + notifyChatObservers(double posx, double posy, double delta): void 
+]

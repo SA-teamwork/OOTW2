@@ -1,0 +1,13 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "RPG/lib/jinput.jar",
+        "RPG/lib/lwjgl.jar",
+        "RPG/lib/slick.jar"
+    ],
+    "cSpell.words": [
+        "desx",
+        "desy",
+        "posx"
+    ]
+}
