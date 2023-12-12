@@ -186,7 +186,7 @@ public class World {
     /**
      * 初始化村民
      */
-    private void initVillager(Player player2) throws SlickException {
+    private void initVillager(Player player) throws SlickException {
         villagers = new ArrayList<>();
         List<Record> records = unitData.getRecords("PrinceAldric");
         if (records != null) {
@@ -197,7 +197,7 @@ public class World {
                         "Bedivere"
                 // rec.getName()
                 );
-                player2.addChatObserver(vl);
+                player.addChatObserver(vl);
                 villagers.add(vl);
             }
         }
@@ -210,7 +210,7 @@ public class World {
                         "Guinevere"
                 // rec.getName()
                 );
-                player2.addChatObserver(vl);
+                player.addChatObserver(vl);
                 villagers.add(vl);
             }
         }
@@ -223,7 +223,7 @@ public class World {
                         "Lancelot"
                 // rec.getName()
                 );
-                player2.addChatObserver(vl);
+                player.addChatObserver(vl);
                 villagers.add(vl);
             }
         }
@@ -232,16 +232,16 @@ public class World {
     /**
      * 初始化主動怪獸
      */
-    private void initAggressiveMonster(Player player2) throws SlickException {
+    private void initAggressiveMonster(Player player) throws SlickException {
         aggressiveMs = new ArrayList<>();
         List<Record> records = unitData.getRecords("Zombie");
         if (records != null) {
             for (Record rec : records) {
                 AggressiveMonster am = new AggressiveMonster(Main.ASSETS_PATH + "/units/zombie.png", rec.getPosx(),
                         rec.getPosy(), 60, 10, 800, AggressiveMonsterResurgence, rec.getName());
-                am.addAttackObserver(player2);
-                player2.addAttackObserver(am);
-                player2.addMoveObserver(am);
+                am.addAttackObserver(player);
+                player.addAttackObserver(am);
+                player.addMoveObserver(am);
                 aggressiveMs.add(am);
             }
         }
@@ -250,9 +250,9 @@ public class World {
             for (Record rec : bandits) {
                 AggressiveMonster am = new AggressiveMonster(Main.ASSETS_PATH + "/units/bandit.png", rec.getPosx(),
                         rec.getPosy(), 40, 8, 200, AggressiveMonsterResurgence, rec.getName());
-                am.addAttackObserver(player2);
-                player2.addAttackObserver(am);
-                player2.addMoveObserver(am);
+                am.addAttackObserver(player);
+                player.addAttackObserver(am);
+                player.addMoveObserver(am);
                 aggressiveMs.add(am);
             }
         }
@@ -261,9 +261,9 @@ public class World {
             for (Record rec : skeletons) {
                 AggressiveMonster am = new AggressiveMonster(Main.ASSETS_PATH + "/units/skeleton.png", rec.getPosx(),
                         rec.getPosy(), 100, 16, 500, AggressiveMonsterResurgence, rec.getName());
-                am.addAttackObserver(player2);
-                player2.addAttackObserver(am);
-                player2.addMoveObserver(am);
+                am.addAttackObserver(player);
+                player.addAttackObserver(am);
+                player.addMoveObserver(am);
                 aggressiveMs.add(am);
             }
         }
@@ -272,9 +272,9 @@ public class World {
             for (Record rec : draelics) {
                 AggressiveMonster am = new AggressiveMonster(Main.ASSETS_PATH + "/units/necromancer.png", rec.getPosx(),
                         rec.getPosy(), 140, 30, 400, AggressiveMonsterResurgence, rec.getName());
-                am.addAttackObserver(player2);
-                player2.addAttackObserver(am);
-                player2.addMoveObserver(am);
+                am.addAttackObserver(player);
+                player.addAttackObserver(am);
+                player.addMoveObserver(am);
                 aggressiveMs.add(am);
             }
         }
