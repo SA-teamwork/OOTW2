@@ -59,22 +59,30 @@ public class World {
     private Camera camera;
     private long t;
 
-    /** Map width, in pixels. */
+    /**
+     * Map width, in pixels.
+     */
     private int getMapWidth() {
         return map.getWidth() * getTileWidth();
     }
 
-    /** Map height, in pixels. */
+    /**
+     * Map height, in pixels.
+     */
     private int getMapHeight() {
         return map.getHeight() * getTileHeight();
     }
 
-    /** Tile width, in pixels. */
+    /**
+     * Tile width, in pixels.
+     */
     private int getTileWidth() {
         return map.getTileWidth();
     }
 
-    /** Tile height, in pixels. */
+    /**
+     * Tile height, in pixels.
+     */
     private int getTileHeight() {
         return map.getTileHeight();
     }
@@ -126,55 +134,57 @@ public class World {
     public World() {
         UnitsData unitData = UnitsData.getInstance("units.dat");
         try {
+            player = new Player(Main.ASSETS_PATH + "/units/player/", 72, 72, PLAYER_START_X, PLAYER_START_Y, 100, 26, 600, PlayerResurgence);
             map = new TiledMap(Main.ASSETS_MAP_PATH + "/map.tmx", Main.ASSETS_MAP_PATH);
-            player = new Player(Main.ASSETS_PATH + "/units/player/", 72, 72, PLAYER_START_X, PLAYER_START_Y,
-                    100, 26, 600, PlayerResurgence);
+            camera = new Camera(player, Main.SCREEN_WIDTH, Main.SCREEN_HEIGHT - Main.STATUS_PANEL_HEIGHT);
 
             initVillager(unitData);
-
-            int numOfApple = 12;
-            items = new Item[4 + numOfApple];
-
-            items[0] = new Item(Main.ASSETS_PATH + "/items/amulet.png", 965, 3563, "amulet");
-            items[1] = new Item(Main.ASSETS_PATH + "/items/sword.png", 546, 6707, "sword");
-            items[2] = new Item(Main.ASSETS_PATH + "/items/tome.png", 4791, 1253, "tome");
-            items[3] = new Item(Main.ASSETS_PATH + "/items/elixir.png", 1976, 402, "elixir");
-
-            int x = getMapWidth();
-            int y = getMapHeight();
-
-            for (int i = 1; i <= numOfApple; i++) {
-                double rx = Math.random() * x;
-                double ry = Math.random() * y;
-                while (this.terrainBlocks(rx, ry)) {
-                    rx = Math.random() * x;
-                    ry = Math.random() * y;
-                }
-
-                items[3 + i] = new Item(Main.ASSETS_PATH + "/items/apple.png", rx, ry, "apple", true);
-                player.addMoveObserver(items[3 + i]);
-            }
-
             initPassiveMonster(unitData);
             initAggressiveMonster(unitData);
-            statusP = new StatusPanel(Main.ASSETS_PATH + "/panel.png", STATUS_PANEL_X, STATUS_PANEL_Y,
-                    Main.SCREEN_WIDTH,
-                    Main.STATUS_PANEL_HEIGHT, player);
+            initItem();
+            initStatePanel();
 
         } catch (SlickException e) {
-            e.printStackTrace();
-            System.err.println("in World");
+            throw new RuntimeException(e);
+        }
+    }
+
+    private  void initStatePanel(){
+        statusP = new StatusPanel(Main.ASSETS_PATH + "/panel.png", STATUS_PANEL_X, STATUS_PANEL_Y,
+                Main.SCREEN_WIDTH,
+                Main.STATUS_PANEL_HEIGHT, player);
+        player.addMoveObserver(statusP);
+    }
+
+    private void initItem() throws SlickException {
+        int numOfApple = 12;
+        items = new Item[4 + numOfApple];
+
+        items[0] = new Item(Main.ASSETS_PATH + "/items/amulet.png", 965, 3563, "amulet");
+        items[1] = new Item(Main.ASSETS_PATH + "/items/sword.png", 546, 6707, "sword");
+        items[2] = new Item(Main.ASSETS_PATH + "/items/tome.png", 4791, 1253, "tome");
+        items[3] = new Item(Main.ASSETS_PATH + "/items/elixir.png", 1976, 402, "elixir");
+
+        int x = getMapWidth();
+        int y = getMapHeight();
+        double rx = 0;
+        double ry = 0;
+        for (int i = 1; i <= numOfApple; i++) {
+            rx = Math.random() * x;
+            ry = Math.random() * y;
+            while (this.terrainBlocks(rx, ry)) {
+                rx = Math.random() * x;
+                ry = Math.random() * y;
+            }
+
+            items[3 + i] = new Item(Main.ASSETS_PATH + "/items/apple.png", rx, ry, "apple", true);
+            player.addMoveObserver(items[3 + i]);
         }
 
         player.addMoveObserver(items[0]);
         player.addMoveObserver(items[1]);
         player.addMoveObserver(items[2]);
         player.addMoveObserver(items[3]);
-
-        player.addMoveObserver(statusP);
-
-        camera = new Camera(player, Main.SCREEN_WIDTH, Main.SCREEN_HEIGHT - Main.STATUS_PANEL_HEIGHT);
-
     }
 
     /**
@@ -189,7 +199,7 @@ public class World {
                         rec.getPosx(), rec.getPosy(),
                         1, 0, 0,
                         "Bedivere"
-                // rec.getName()
+                        // rec.getName()
                 );
                 player.addChatObserver(vl);
                 villagers.add(vl);
@@ -202,7 +212,7 @@ public class World {
                         rec.getPosx(), rec.getPosy(),
                         1, 0, 0,
                         "Guinevere"
-                // rec.getName()
+                        // rec.getName()
                 );
                 player.addChatObserver(vl);
                 villagers.add(vl);
@@ -215,7 +225,7 @@ public class World {
                         rec.getPosx(), rec.getPosy(),
                         1, 0, 0,
                         "Lancelot"
-                // rec.getName()
+                        // rec.getName()
                 );
                 player.addChatObserver(vl);
                 villagers.add(vl);
@@ -297,7 +307,7 @@ public class World {
 
     /**
      * Update the game state for a frame.
-     * 
+     *
      * @param dir_x The player's movement in the x axis (-1, 0 or 1).
      * @param dir_y The player's movement in the y axis (-1, 0 or 1).
      * @param delta Time passed since last frame (milliseconds).
@@ -317,7 +327,7 @@ public class World {
 
     /**
      * Render the entire screen, so it reflects the current game state.
-     * 
+     *
      * @param g The Slick graphics object, used for drawing.
      */
     public void render(Graphics g)
@@ -353,7 +363,7 @@ public class World {
 
     /**
      * Determines whether a particular map coordinate blocks movement.
-     * 
+     *
      * @param x Map x coordinate (in pixels).
      * @param y Map y coordinate (in pixels).
      * @return true if the coordinate blocks movement.
