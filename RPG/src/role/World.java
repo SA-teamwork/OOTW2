@@ -57,8 +57,6 @@ public class World {
     private StatusPanel statusP;
     private TiledMap map;
     private Camera camera;
-    private UnitsData unitData;
-
     private long t;
 
     /** Map width, in pixels. */
@@ -123,20 +121,16 @@ public class World {
             e.printStackTrace();
         }
         this.camera = new Camera(w.camera, player);
-        this.unitData = UnitsData.getInstance("units.dat");
-
     }
 
     public World() {
-        // unitData =
-        // UnitsData.getInstance("C:\\Users\\ah_flowey\\rpg\\RPG\\src\\units.datdat");
-        unitData = UnitsData.getInstance("units.dat");
+        UnitsData unitData = UnitsData.getInstance("units.dat");
         try {
             map = new TiledMap(Main.ASSETS_MAP_PATH + "/map.tmx", Main.ASSETS_MAP_PATH);
             player = new Player(Main.ASSETS_PATH + "/units/player/", 72, 72, PLAYER_START_X, PLAYER_START_Y,
                     100, 26, 600, PlayerResurgence);
 
-            initVillager(player);
+            initVillager(unitData);
 
             int numOfApple = 12;
             items = new Item[4 + numOfApple];
@@ -161,8 +155,8 @@ public class World {
                 player.addMoveObserver(items[3 + i]);
             }
 
-            initPassiveMonster(unitData, player);
-            initAggressiveMonster(player);
+            initPassiveMonster(unitData);
+            initAggressiveMonster(unitData);
             statusP = new StatusPanel(Main.ASSETS_PATH + "/panel.png", STATUS_PANEL_X, STATUS_PANEL_Y,
                     Main.SCREEN_WIDTH,
                     Main.STATUS_PANEL_HEIGHT, player);
@@ -186,7 +180,7 @@ public class World {
     /**
      * 初始化村民
      */
-    private void initVillager(Player player) throws SlickException {
+    private void initVillager(UnitsData unitData) throws SlickException {
         villagers = new ArrayList<>();
         List<Record> records = unitData.getRecords("PrinceAldric");
         if (records != null) {
@@ -232,7 +226,7 @@ public class World {
     /**
      * 初始化主動怪獸
      */
-    private void initAggressiveMonster(Player player) throws SlickException {
+    private void initAggressiveMonster(UnitsData unitData) throws SlickException {
         aggressiveMs = new ArrayList<>();
         List<Record> records = unitData.getRecords("Zombie");
         if (records != null) {
@@ -283,7 +277,7 @@ public class World {
     /**
      * 初始化被動怪獸
      */
-    private void initPassiveMonster(UnitsData unitData, Player player) throws SlickException {
+    private void initPassiveMonster(UnitsData unitData) throws SlickException {
         List<Record> giants = unitData.getRecords("GiantBat");
         if (giants != null) {
             passiveMs = new PassiveMonster[giants.size()];
