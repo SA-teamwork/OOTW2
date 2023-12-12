@@ -30,14 +30,14 @@ import observer.PlayerMoveObservable;
 public class Player extends Unit
 		implements PlayerMoveObservable, PlayerAttackObservable, PlayerChatObservable, MonsterAttackObserver {
 	// 存放監聽player移動動作的監聽者。
-	private List<PlayerMoveObserver> observers = new ArrayList<PlayerMoveObserver>();
+	private List<PlayerMoveObserver> observers = new ArrayList<>();
 	// 存放監聽player攻擊動作的監聽者。
-	private List<PlayerAttackObserver> attackObservers = new ArrayList<PlayerAttackObserver>();
+	private List<PlayerAttackObserver> attackObservers = new ArrayList<>();
 	// 存放監聽player chat動作的監聽者。
-	private List<PlayerChatObserver> chatObservers = new ArrayList<PlayerChatObserver>();
+	private List<PlayerChatObserver> chatObservers = new ArrayList<>();
 	// Pixels per millisecond
 	// private static final double SPEED = 0.25;
-	private static final double SPEED = 0.5;
+	private static final double SPEED = 1;
 	private LinkedHashMap<String, Item> itemsmap = new LinkedHashMap<>();
 	// whether get the elixir
 	private boolean elixir;
@@ -52,7 +52,7 @@ public class Player extends Unit
 		// this.attackObservers = new
 		// ArrayList<PlayerAttackObserver>(p.attackObservers);
 		// this.chatObservers = new ArrayList<PlayerChatObserver>(p.chatObservers);
-		this.itemsmap = new LinkedHashMap<String, Item>(p.itemsmap);
+		this.itemsmap = new LinkedHashMap<>(p.itemsmap);
 
 		this.elixir = p.elixir;
 		this.rd = new Random();
@@ -103,29 +103,7 @@ public class Player extends Unit
 	public void putItem(Item item) {
 		synchronized (this) {
 			itemsmap.put(item.getName(), item);
-			// if (!itemsmap.containsKey(item.getName()) && !item.isImmediate()) {
-			// // itemsmap.put(item.getName(), item);
-			// // you can also just identify item by name
-			// if (item instanceof Amulet) {
-			// Amulet amulet = (Amulet) item;
-			// this.addMax_HP(amulet.getHp());
-			// }
-			// if (item instanceof Sword) {
-			// Sword sword = (Sword) item;
-			// this.addAttack(sword.getDamage());
-			// }
-			// if (item instanceof Tome) {
-			// Tome tome = (Tome) item;
-			// this.addCoolDown(tome.getCooldown());
-			// }
-			// if (item instanceof Elixir)
-			// this.elixir = true;
-			// } else if (!itemsmap.containsKey(item.getName())) {
-			// if (item instanceof Apple) {
-			// Apple apple = (Apple) item;
-			// this.addHP(apple.getHp());
-			// }
-			// }
+
 		}
 
 	}

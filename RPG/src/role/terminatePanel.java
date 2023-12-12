@@ -35,7 +35,7 @@ public class terminatePanel extends BasicGameState {
 
     @Override
     public void init(GameContainer gc, StateBasedGame sbg) throws SlickException {
-        this.mementoList = new ArrayList<Memento>();
+        this.mementoList = new ArrayList<>();
         this.game = (RPG) sbg.getState(1);
         this.f = new UnicodeFont(Main.ASSETS_PATH + "/Silver.ttf", 24, false, false);
         this.f.getEffects().add(new ColorEffect());
@@ -43,7 +43,7 @@ public class terminatePanel extends BasicGameState {
         this.f.loadGlyphs();
     }
 
-    private void renderLeft(Graphics g, int ss_x, int ss_y) {
+    private void renderLeft() {
         int x = padding[0];
         int y = padding[1];
         int tmp = margin;
@@ -53,7 +53,7 @@ public class terminatePanel extends BasicGameState {
         }
     }
 
-    private void renderRigeht(Graphics g, int ss_x, int ss_y) {
+    private void renderRigeht(int ss_x) {
         int l = mementoList.size();
         int x = ss_x + padding[0];
         int y = padding[1];
@@ -93,8 +93,8 @@ public class terminatePanel extends BasicGameState {
         int ss_x = gc.getWidth() / 2;
         int ss_y = gc.getHeight() / 2;
 
-        renderLeft(g, ss_x, ss_y);
-        renderRigeht(g, ss_x, ss_y);
+        renderLeft();
+        renderRigeht(ss_x);
 
         if (updateMes(0)) {
             String mesBeShow = mes[mes_id];
@@ -183,9 +183,7 @@ public class terminatePanel extends BasicGameState {
         } else {
             try {
                 guiActionUpdate(gc, sbg, delta);
-            } catch (IllegalAccessException e) {
-                e.printStackTrace();
-            } catch (CloneNotSupportedException e) {
+            } catch (IllegalAccessException | CloneNotSupportedException e) {
                 e.printStackTrace();
             }
         }

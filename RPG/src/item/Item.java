@@ -106,9 +106,9 @@ public class Item implements PlayerMoveObserver {
 			// 距离50像素
 			double dist = DistUtils.dist(posx, posy, this.posx, this.posy);
 			if (dist <= 20) {
-				// System.out.println("pick!!");
+				System.out.println("pick!!");
 				// player get the item
-				if (immediate) {
+				if (!immediate) {
 					player.putItem(this);
 				}
 				ia.action(player);

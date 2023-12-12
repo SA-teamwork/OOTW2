@@ -32,8 +32,8 @@ public class Unit {
     private boolean isMove = false;
     private boolean atkble = false;
 
-    private List<Animation> anima = new ArrayList<Animation>();
-    private List<Animation> anima_flipped = new ArrayList<Animation>();
+    private List<Animation> anima = new ArrayList<>();
+    private List<Animation> anima_flipped = new ArrayList<>();
 
     /**
      * 判斷角色是否滅絕，角色一旦滅絕就不會復活，
@@ -72,14 +72,14 @@ public class Unit {
         this.atkble = u.atkble;
 
         if (!u.anima.isEmpty()) {
-            this.anima = new ArrayList<Animation>();
+            this.anima = new ArrayList<>();
             for (Animation a : u.anima) {
                 a = a.copy();
                 a.restart();
                 this.anima.add(a);
             }
 
-            this.anima_flipped = new ArrayList<Animation>();
+            this.anima_flipped = new ArrayList<>();
             for (Animation a : u.anima_flipped) {
                 a = a.copy();
                 a.restart();
@@ -261,7 +261,7 @@ public class Unit {
         HP = hP;
     }
 
-    private void renderWithoutAnima(Graphics g) {
+    private void renderWithoutAnima() {
         if (this.isActive()) {
             Image which_img;
             which_img = this.face_left ? this.img_flipped : this.img;
@@ -269,7 +269,7 @@ public class Unit {
         }
     }
 
-    private void renderDirectly(Graphics g, int i) {
+    private void renderDirectly(int i) {
         if (this.face_left) {
             this.anima_flipped.get(i).draw((int) (posx - (width / 2)), (int) (posy - (height / 2)));
         } else {
@@ -277,33 +277,33 @@ public class Unit {
         }
     }
 
-    private void renderMoveAnima(Graphics g) {
+    private void renderMoveAnima() {
         if (!this.isMove) {
-            renderDirectly(g, 0);
-        } else if (this.isMove) {
-            renderDirectly(g, 1);
+            renderDirectly(0);
+        } else {
+            renderDirectly(1);
         }
     }
 
-    private void renderAnima_CanAtk(Graphics g) {
+    private void renderAnima_CanAtk() {
         if (this.isActive()) {
             if (this.getCoolDownTime() <= 0) {
                 this.anima.get(3).restart();
                 this.anima_flipped.get(3).restart();
-                renderMoveAnima(g);
+                renderMoveAnima();
             } else if (this.getCoolDownTime() > 0) {
-                renderDirectly(g, 3);
+                renderDirectly(3);
             }
         } else if (!this.anima_flipped.get(2).isStopped() && !this.anima.get(2).isStopped()) {
-            renderDirectly(g, 2);
+            renderDirectly(2);
         }
     }
 
-    private void renderAnima_CanNotAtk(Graphics g) {
+    private void renderAnima_CanNotAtk() {
         if (this.isActive()) {
-            renderMoveAnima(g);
+            renderMoveAnima();
         } else if (!this.anima_flipped.get(2).isStopped() && !this.anima.get(2).isStopped()) {
-            renderDirectly(g, 2);
+            renderDirectly(2);
         }
     }
 
@@ -311,16 +311,14 @@ public class Unit {
      * Draw the player to the screen at the correct place.
      * 
      * @param g     The current Graphics context.
-     * @param cam_x Camera x position in pixels.
-     * @param cam_y Camera y position in pixels.
      */
     public void render(Graphics g) {
         if (anima.size() == 0) {
-            renderWithoutAnima(g);
+            renderWithoutAnima();
         } else if (this.anima.size() == 3) {
-            renderAnima_CanNotAtk(g);
+            renderAnima_CanNotAtk();
         } else if (this.anima.size() == 4) {
-            renderAnima_CanAtk(g);
+            renderAnima_CanAtk();
         }
     }
 
@@ -331,7 +329,7 @@ public class Unit {
         if (this.HP > 0) {
             if (attackValue > 0) {
                 int leftHp = this.HP - attackValue;
-                this.HP = (leftHp <= 0) ? 0 : leftHp;
+                this.HP = Math.max(leftHp, 0);
                 if (this.HP <= 0) {
                     // 死亡
                     death();
@@ -377,7 +375,7 @@ public class Unit {
             this.anima.get(3).restart();
             this.anima_flipped.get(2).restart();
             this.anima_flipped.get(3).restart();
-        } catch (Exception e) {
+        } catch (Exception ignored) {
         }
     }
 
@@ -469,10 +467,8 @@ public class Unit {
     /**
      * 計算新的座標
      * 
-     * @param world
      * @param dir_x The unit's movement in the x axis (-1, 0 or 1).
      * @param dir_y The unit's movement in the y axis (-1, 0 or 1).
-     * @param speed
      * @param delta Time passed since last frame (milliseconds).
      */
     public void calculateNewCoordinate(World world, double dir_x, double dir_y, double speed, double delta) {

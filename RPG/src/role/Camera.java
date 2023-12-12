@@ -12,8 +12,7 @@ public class Camera {
     /** The unit this camera is following */
     private Player unitFollow;
 
-    /** The width and height of the screen */
-    /** Screen width, in pixels. */
+    /** The width and height of the screen, Screen width, in pixels. */
     private int screenwidth;
     /** Screen height, in pixels. */
     private int screenheight;

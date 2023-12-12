@@ -14,13 +14,13 @@ public class Main extends StateBasedGame {
     // "C:\\Users\\ah_flowey\\Documents\\OOTW1\\RPG\\assets";
     // public static final String ASSETS_MAP_PATH =
     // "C:\\Users\\ah_flowey\\Documents\\OOTW1\\RPG\\assets\\map";
-    public static final String ASSETS_PATH = "C:\\Users\\selab\\Documents\\GitHub\\OOTW1\\RPG\\assets";
-    public static final String ASSETS_MAP_PATH = "C:\\Users\\selab\\Documents\\GitHub\\OOTW1\\RPG\\assets\\map";
+    public static final String ASSETS_PATH = "C:\\Users\\selab\\IdeaProjects\\OOTW2\\RPG\\assets";
+    public static final String ASSETS_MAP_PATH = "C:\\Users\\selab\\IdeaProjects\\OOTW2\\RPG\\assets\\map";
 
     /** Screen width, in pixels. */
     public static final int SCREEN_WIDTH = 800;
     /** Screen height, in pixels. */
-    public static final int SCREEN_HEIGHT = 600;
+    public static final int SCREEN_HEIGHT = 675;
     /** panel height, in pixels. */
     public static final int STATUS_PANEL_HEIGHT = 75;
     /** name bar height, in pixels. */
@@ -48,7 +48,7 @@ public class Main extends StateBasedGame {
         // app.setFullscreen(false);
         // app.setDisplayMode((int) (800 * 1.2), (int) (600 * 1.2), false);
         // app.setDisplayMode(1920, 1000, false);
-        app.setDisplayMode(800, 600, false);
+        app.setDisplayMode(800, 675, false);
         // app.
         // app.setFullscreen(true);
         app.start();

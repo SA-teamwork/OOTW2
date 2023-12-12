@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.newdawn.slick.Graphics;
+import org.newdawn.slick.Image;
 import org.newdawn.slick.SlickException;
 import org.newdawn.slick.tiled.TiledMap;
 
@@ -44,6 +45,8 @@ public class World {
     private static final long PlayerResurgence = 3000L;
     public static final int PLAYER_START_X = 756, PLAYER_START_Y = 684;
     private static final int STATUS_PANEL_X = PLAYER_START_X - Main.SCREEN_WIDTH / 2;
+    // private static final int STATUS_PANEL_Y = PLAYER_START_Y + Main.SCREEN_HEIGHT
+    // / 2;
     private static final int STATUS_PANEL_Y = PLAYER_START_Y + Main.SCREEN_HEIGHT / 2 - Main.STATUS_PANEL_HEIGHT;
 
     private Player player;
@@ -56,7 +59,7 @@ public class World {
     private Camera camera;
     private UnitsData unitData;
 
-    public long t;
+    private long t;
 
     /** Map width, in pixels. */
     private int getMapWidth() {
@@ -81,7 +84,7 @@ public class World {
     private World(World w) throws CloneNotSupportedException {
         this.player = new Player(w.player);
 
-        this.villagers = new ArrayList<VillagersTemplete>();
+        this.villagers = new ArrayList<>();
         for (VillagersTemplete v : w.villagers) {
             VillagersTemplete vc = v.clone();
 
@@ -89,7 +92,7 @@ public class World {
             this.player.addChatObserver(vc);
         }
 
-        this.aggressiveMs = new ArrayList<AggressiveMonster>();
+        this.aggressiveMs = new ArrayList<>();
         for (AggressiveMonster am : w.aggressiveMs) {
             AggressiveMonster amc = new AggressiveMonster(am);
 
@@ -133,7 +136,7 @@ public class World {
             player = new Player(Main.ASSETS_PATH + "/units/player/", 72, 72, PLAYER_START_X, PLAYER_START_Y,
                     100, 26, 600, PlayerResurgence);
 
-            initVillager(unitData, player);
+            initVillager(player);
 
             int numOfApple = 12;
             items = new Item[4 + numOfApple];
@@ -154,12 +157,12 @@ public class World {
                     ry = Math.random() * y;
                 }
 
-                items[3 + i] = new Item(Main.ASSETS_PATH + "/items/apple.png", rx, ry, "apple");
+                items[3 + i] = new Item(Main.ASSETS_PATH + "/items/apple.png", rx, ry, "apple", true);
                 player.addMoveObserver(items[3 + i]);
             }
 
             initPassiveMonster(unitData, player);
-            initAggressiveMonster(unitData, player);
+            initAggressiveMonster(player);
             statusP = new StatusPanel(Main.ASSETS_PATH + "/panel.png", STATUS_PANEL_X, STATUS_PANEL_Y,
                     Main.SCREEN_WIDTH,
                     Main.STATUS_PANEL_HEIGHT, player);
@@ -183,12 +186,11 @@ public class World {
     /**
      * 初始化村民
      */
-    private void initVillager(UnitsData unitData2, Player player2) throws SlickException {
+    private void initVillager(Player player2) throws SlickException {
         villagers = new ArrayList<>();
         List<Record> records = unitData.getRecords("PrinceAldric");
         if (records != null) {
-            for (int i = 0; i < records.size(); i++) {
-                Record rec = records.get(i);
+            for (Record rec : records) {
                 VillagersTemplete vl = new Bedivere(Main.ASSETS_PATH + "/units/prince.png",
                         rec.getPosx(), rec.getPosy(),
                         1, 0, 0,
@@ -201,8 +203,7 @@ public class World {
         }
         records = unitData.getRecords("Elvira");
         if (records != null) {
-            for (int i = 0; i < records.size(); i++) {
-                Record rec = records.get(i);
+            for (Record rec : records) {
                 VillagersTemplete vl = new Guinevere(Main.ASSETS_PATH + "/units/shaman.png",
                         rec.getPosx(), rec.getPosy(),
                         1, 0, 0,
@@ -215,8 +216,7 @@ public class World {
         }
         records = unitData.getRecords("Garth");
         if (records != null) {
-            for (int i = 0; i < records.size(); i++) {
-                Record rec = records.get(i);
+            for (Record rec : records) {
                 VillagersTemplete vl = new Lancelot(Main.ASSETS_PATH + "/units/peasant.png",
                         rec.getPosx(), rec.getPosy(),
                         1, 0, 0,
@@ -232,12 +232,11 @@ public class World {
     /**
      * 初始化主動怪獸
      */
-    private void initAggressiveMonster(UnitsData unitData2, Player player2) throws SlickException {
-        aggressiveMs = new ArrayList<AggressiveMonster>();
+    private void initAggressiveMonster(Player player2) throws SlickException {
+        aggressiveMs = new ArrayList<>();
         List<Record> records = unitData.getRecords("Zombie");
         if (records != null) {
-            for (int i = 0; i < records.size(); i++) {
-                Record rec = records.get(i);
+            for (Record rec : records) {
                 AggressiveMonster am = new AggressiveMonster(Main.ASSETS_PATH + "/units/zombie.png", rec.getPosx(),
                         rec.getPosy(), 60, 10, 800, AggressiveMonsterResurgence, rec.getName());
                 am.addAttackObserver(player2);
@@ -248,8 +247,7 @@ public class World {
         }
         List<Record> bandits = unitData.getRecords("Bandit");
         if (bandits != null) {
-            for (int i = 0; i < bandits.size(); i++) {
-                Record rec = bandits.get(i);
+            for (Record rec : bandits) {
                 AggressiveMonster am = new AggressiveMonster(Main.ASSETS_PATH + "/units/bandit.png", rec.getPosx(),
                         rec.getPosy(), 40, 8, 200, AggressiveMonsterResurgence, rec.getName());
                 am.addAttackObserver(player2);
@@ -260,8 +258,7 @@ public class World {
         }
         List<Record> skeletons = unitData.getRecords("Skeleton");
         if (skeletons != null) {
-            for (int i = 0; i < skeletons.size(); i++) {
-                Record rec = skeletons.get(i);
+            for (Record rec : skeletons) {
                 AggressiveMonster am = new AggressiveMonster(Main.ASSETS_PATH + "/units/skeleton.png", rec.getPosx(),
                         rec.getPosy(), 100, 16, 500, AggressiveMonsterResurgence, rec.getName());
                 am.addAttackObserver(player2);
@@ -272,8 +269,7 @@ public class World {
         }
         List<Record> draelics = unitData.getRecords("Draelic");
         if (draelics != null) {
-            for (int i = 0; i < draelics.size(); i++) {
-                Record rec = draelics.get(i);
+            for (Record rec : draelics) {
                 AggressiveMonster am = new AggressiveMonster(Main.ASSETS_PATH + "/units/necromancer.png", rec.getPosx(),
                         rec.getPosy(), 140, 30, 400, AggressiveMonsterResurgence, rec.getName());
                 am.addAttackObserver(player2);
@@ -356,6 +352,8 @@ public class World {
             pm.render(g);
         for (AggressiveMonster am : aggressiveMs)
             am.render(g);
+        Image backGround = new Image(Main.ASSETS_PATH + "/fag_apha.png");
+        g.drawImage(backGround, (int) camera.getMinX(), (int) camera.getMinY());
         statusP.render(g);
     }
 

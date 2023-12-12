@@ -30,7 +30,7 @@ public class AggressiveMonster extends Unit
 	 * 移動狀態
 	 */
 	private boolean isMove = false;
-	private List<MonsterAttackObserver> attackObservers = new ArrayList<MonsterAttackObserver>();
+	private List<MonsterAttackObserver> attackObservers = new ArrayList<>();
 	/**
 	 * 在(0-attack) Random dmg
 	 */

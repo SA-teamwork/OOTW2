@@ -47,9 +47,6 @@ public class PassiveMonster extends Unit implements PlayerAttackObserver {
 	}
 
 	public void move(World world, Player player, double delta) {
-		/**
-		 * position befor move
-		 */
 		double pre_x = this.getPosx();
 		double pre_y = this.getPosy();
 

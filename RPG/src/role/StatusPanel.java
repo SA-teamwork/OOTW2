@@ -66,15 +66,8 @@ public class StatusPanel implements PlayerMoveObserver {
 	}
 
 	private void drawPanel(double posx, double posy) {
-		double fixdisx = Main.SCREEN_WIDTH / 2;
-		double fixdisy = Main.SCREEN_HEIGHT / 2 - this.height;
-		double distx = posx - this.posx;
-		double disty = this.posy - posy;
-		distx -= fixdisx;
-		disty -= fixdisy;
-		this.posx += distx;
-		this.posy -= disty;
-		this.posy = this.posy + this.height / 2;
+		this.posx = (int) posx - 400;
+		this.posy = (int) posy + 300;
 	}
 
 	public void renderPanel(Graphics g) {
@@ -89,29 +82,30 @@ public class StatusPanel implements PlayerMoveObserver {
 		String text; // Text to display
 		int text_x, text_y; // Coordinates to draw text
 		int bar_x, bar_y; // Coordinates to draw rectangles
-		int bar_width, bar_height; // Size of rectangle to draw
+		int bar_side, bar_height; // Size of rectangle to draw
 		int hp_bar_width; // Size of red (HP) rectangle
 		int inv_x, inv_y; // Coordinates to draw inventory item
 
 		// Panel background image
 		// panel.draw(0, RPG.SCREEN_HEIGHT - RPG.STATUS_PANEL_HEIGTH);
-		panel.draw(posx, posy);
+		panel.draw(posx, posy - 5);
 
 		// Display the player's health
+
 		text_x = (int) (posx + 15);
-		text_y = (int) (this.posy + 25);
+		text_y = (int) (posy + 25);
 		g.setColor(LABEL);
 		g.drawString("Health:", text_x, text_y);
 		text = String.valueOf(player.getHP()) + '/' + String.valueOf(player.getMAX_HP());
 
 		bar_x = (int) (posx + 90);
 		bar_y = (int) (posy + 20);
-		bar_width = 90;
+		bar_side = 90;
 		bar_height = 30;
-		hp_bar_width = (int) (bar_width * player.getPercentage());
-		text_x = bar_x + (bar_width - g.getFont().getWidth(text)) / 2;
+		hp_bar_width = (int) (bar_side * player.getPercentage());
+		text_x = bar_x + (bar_side - g.getFont().getWidth(text)) / 2;
 		g.setColor(BAR_BG);
-		g.fillRect(bar_x, bar_y, bar_width, bar_height);
+		g.fillRect(bar_x, bar_y, bar_side, bar_height);
 		g.setColor(BAR);
 		g.fillRect(bar_x, bar_y, hp_bar_width, bar_height);
 		g.setColor(VALUE);
@@ -129,13 +123,11 @@ public class StatusPanel implements PlayerMoveObserver {
 		g.setColor(LABEL);
 		g.drawString("Rate:", text_x, text_y);
 
-		text = String.valueOf(player.getCoolDownTime()) + '/' + String.valueOf(player.getCoolDown());
-
 		bar_x = text_x + 55;
-		bar_width -= 40;
-		hp_bar_width = (int) (bar_width * player.getCooldownPercentage());
+		bar_side -= 40;
+		hp_bar_width = (int) (bar_side * player.getCooldownPercentage());
 		g.setColor(BAR_BG);
-		g.fillRect(bar_x, bar_y, bar_width, bar_height);
+		g.fillRect(bar_x, bar_y, bar_side, bar_height);
 		g.setColor(BLUE);
 		g.fillRect(bar_x, bar_y, hp_bar_width, bar_height);
 
@@ -147,21 +139,25 @@ public class StatusPanel implements PlayerMoveObserver {
 		// Display the player's inventory
 		g.setColor(LABEL);
 		g.drawString("Items:", text_x + 50, text_y);
-		bar_x = text_x + 115;
-		bar_y = text_y - 14;
-		bar_width = 288;
-		bar_height = bar_height + 20;
-		g.setColor(BAR_BG);
-		g.fillRect(bar_x, bar_y, bar_width, bar_height);
 
-		inv_x = bar_x;
-		inv_y = (int) player.getPosy() + Main.SCREEN_HEIGHT / 2 - Main.STATUS_PANEL_HEIGHT / 2
-				+ ((Main.STATUS_PANEL_HEIGHT - 72) / 2);
+		int item_side = 72;
+		bar_side = 60;
+		bar_x = text_x + 115;
+		bar_y = (int) posy + (Main.STATUS_PANEL_HEIGHT - bar_side) / 2;
+		int gap = 10;
+
+		for (int i = 0; i < 4; i++) {
+			g.setColor(BAR_BG);
+			g.fillRect(bar_x + i * (bar_side + gap), bar_y, bar_side, bar_side);
+		}
+
+		inv_x = bar_x - (item_side - bar_side) / 2;
+		inv_y = bar_y - (item_side - bar_side) / 2;
 		LinkedHashMap<String, Item> items = player.getItems();
 		for (String key : items.keySet()) {
 			Item item = items.get(key);
 			item.getImage().draw(inv_x, inv_y);
-			inv_x += 72;
+			inv_x += bar_side + gap;
 		}
 
 	}
