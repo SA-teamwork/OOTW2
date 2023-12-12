@@ -28,7 +28,7 @@ import role.unit.monster.PassiveMonster;
  * Represents the entire game world.
  * (Designed to be instantiated just once for the whole game).
  */
-public class World {
+public class World implements Cloneable{
     /**
      * 被動攻擊者復活等待時間
      * 等待復活時間小於0表示角色不可以復活，一旦hp<=0，則直接滅絕。 in mills
@@ -57,7 +57,7 @@ public class World {
     private StatusPanel statusP;
     private TiledMap map;
     private Camera camera;
-    private long t;
+//    private long t;
 
     /**
      * Map width, in pixels.
@@ -87,7 +87,7 @@ public class World {
         return map.getTileHeight();
     }
 
-    private World(World w) throws CloneNotSupportedException {
+    private World(World w) {
         this.player = new Player(w.player);
 
         this.villagers = new ArrayList<>();
@@ -149,7 +149,7 @@ public class World {
         }
     }
 
-    private  void initStatePanel(){
+    private void initStatePanel() {
         statusP = new StatusPanel(Main.ASSETS_PATH + "/panel.png", STATUS_PANEL_X, STATUS_PANEL_Y,
                 Main.SCREEN_WIDTH,
                 Main.STATUS_PANEL_HEIGHT, player);
@@ -167,8 +167,8 @@ public class World {
 
         int x = getMapWidth();
         int y = getMapHeight();
-        double rx = 0;
-        double ry = 0;
+        double rx;
+        double ry;
         for (int i = 1; i <= numOfApple; i++) {
             rx = Math.random() * x;
             ry = Math.random() * y;
@@ -314,7 +314,7 @@ public class World {
      */
     public void update(int dir_x, int dir_y, int delta)
             throws SlickException {
-        this.t = System.currentTimeMillis();
+//        this.t = System.currentTimeMillis();
         player.update(this, dir_x, dir_y, delta);
         for (PassiveMonster pm : passiveMs)
             pm.update(this, dir_x, dir_y, delta, player);
@@ -357,7 +357,7 @@ public class World {
         for (AggressiveMonster am : aggressiveMs)
             am.render(g);
         Image backGround = new Image(Main.ASSETS_PATH + "/fag_apha.png");
-        g.drawImage(backGround, (int) camera.getMinX(), (int) camera.getMinY());
+        g.drawImage(backGround, camera.getMinX(), camera.getMinY());
         statusP.render(g);
     }
 
@@ -407,7 +407,14 @@ public class World {
         player.attack(dir_x, dir_y, delta);
     }
 
-    public World clone() throws CloneNotSupportedException {
-        return new World(this);
+
+    @Override
+    public World clone() {
+        try {
+            super.clone();
+            return new World(this);
+        } catch (CloneNotSupportedException e) {
+            throw new AssertionError();
+        }
     }
 }

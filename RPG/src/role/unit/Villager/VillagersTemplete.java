@@ -16,7 +16,7 @@ import role.unit.Unit;
  *          类说明
  *          村民角色描述类
  */
-public abstract class VillagersTemplete extends Unit implements PlayerChatObserver {
+public abstract class VillagersTemplete extends Unit implements PlayerChatObserver, Cloneable {
 	private String chat = "";
 	private boolean chatvisible = false;
 	private long chatperiod = 0L;
@@ -57,11 +57,6 @@ public abstract class VillagersTemplete extends Unit implements PlayerChatObserv
 		}
 	}
 
-	/**
-	 * 绘制会话
-	 * 
-	 * @param g
-	 */
 	private void drawChat(Graphics g) {
 		// UnicodeFont(String ttfFileRef, int size, boolean bold, boolean italic)
 		Color VALUE = new Color(1.0f, 1.0f, 1.0f); // White
@@ -107,11 +102,17 @@ public abstract class VillagersTemplete extends Unit implements PlayerChatObserv
 
 	}
 
-	@Override
-	public VillagersTemplete clone() throws CloneNotSupportedException {
-		return deepClone();
-	}
 
 	abstract VillagersTemplete deepClone();
 
+
+	@Override
+	public VillagersTemplete clone() {
+		try {
+			super.clone();
+			return deepClone();
+		} catch (CloneNotSupportedException e) {
+			throw new AssertionError();
+		}
+	}
 }

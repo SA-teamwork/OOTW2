@@ -36,8 +36,7 @@ public class Player extends Unit
 	// 存放監聽player chat動作的監聽者。
 	private List<PlayerChatObserver> chatObservers = new ArrayList<>();
 	// Pixels per millisecond
-	// private static final double SPEED = 0.25;
-	private static final double SPEED = 1;
+	 private static final double SPEED = 0.5;
 	private LinkedHashMap<String, Item> itemsmap = new LinkedHashMap<>();
 	// whether get the elixir
 	private boolean elixir;
