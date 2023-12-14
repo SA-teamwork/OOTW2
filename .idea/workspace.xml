@@ -4,14 +4,254 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a2d0ce75-c952-41d8-a0cc-8e2bbd07a616" name="更改" comment="更改">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="cba2c64e-6dab-4476-bc43-f5e3b279c047" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/1/31f02413d6268cf3017987f5c7243b93e3a48e9b" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/7/57f5cf22edcd5f5298c176092344c9e5a4c1f5af" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/8/5824bca6e02fbdd6e673592af0a1bf1e2bb4cbe6" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/5/95541edc5c83e2ab409aa0a61b3e7b998fa8290a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/c/9ca676f3d4d6104b9dcb70a212454fdbbe5e15ee" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/d/9d6d1563f7ff0ab5ef14a8f0122a1bf4dd491854" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/c/ac9a2ff7bb3746c1e0787e9abe5b563c0c247103" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/e/ae82efbffcf4a550e227bcaf39411963585d744b" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/d/dd13eb508b5cc78073200287c993b2624ef0bbbd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/3/1/31f02413d6268cf3017987f5c7243b93e3a48e9b" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/5/7/57f5cf22edcd5f5298c176092344c9e5a4c1f5af" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/5/8/5824bca6e02fbdd6e673592af0a1bf1e2bb4cbe6" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/9/5/95541edc5c83e2ab409aa0a61b3e7b998fa8290a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/9/c/9ca676f3d4d6104b9dcb70a212454fdbbe5e15ee" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/9/d/9d6d1563f7ff0ab5ef14a8f0122a1bf4dd491854" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/a/c/ac9a2ff7bb3746c1e0787e9abe5b563c0c247103" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/a/e/ae82efbffcf4a550e227bcaf39411963585d744b" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/d/d/dd13eb508b5cc78073200287c993b2624ef0bbbd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OOTW2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TRASH/OOTW1.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/role/FontMgr.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OOTW1.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/.idea/libraries/lib.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/RPG.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/assets/NotoSansTC-Light.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/assets/NotoSansTC-VariableFont_wght.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/assets/OFL.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/assets/README.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/assets/Silver.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/assets/items/amulet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/assets/items/apple.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/assets/items/elixir.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/assets/items/sword.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/assets/items/tome.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/assets/map.tmx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/assets/map/Basic Grass Biom things 12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/assets/map/Basic Grass Biom things2.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/assets/map/Free_Chicken_House 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/assets/map/Free_Chicken_House 1.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/assets/map/Grass1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/assets/map/Grass1.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/assets/map/Hills1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/assets/map/Hills1.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/assets/map/Water1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/assets/map/Water1.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/assets/map/Wood Bridge 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/assets/map/Wood Bridge 1.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/assets/map/map.tmx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/assets/map/plainsbig.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/assets/map/plainsbig.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/assets/map/tiles.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/assets/map/tilesHouse.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/assets/map/tilesHouse.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/assets/map/tileset.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/assets/map/tileset2.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/assets/panel.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/assets/renderpanel.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/assets/startPanel.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/assets/static/NotoSansTC-Black.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/assets/static/NotoSansTC-Bold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/assets/static/NotoSansTC-ExtraBold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/assets/static/NotoSansTC-ExtraLight.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/assets/static/NotoSansTC-Light.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/assets/static/NotoSansTC-Medium.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/assets/static/NotoSansTC-Regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/assets/static/NotoSansTC-SemiBold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/assets/static/NotoSansTC-Thin.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/assets/tiles.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/assets/tileset.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/assets/units/Basic Grass Biom things 12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/assets/units/EloneMa/die.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/assets/units/EloneMa/move.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/assets/units/EloneMa/static.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/assets/units/bandit.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/assets/units/dreadbat.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/assets/units/moster1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/assets/units/moster2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/assets/units/necromancer.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/assets/units/peasant.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/assets/units/player/atk.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/assets/units/player/atk2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/assets/units/player/die.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/assets/units/player/die1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/assets/units/player/move.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/assets/units/player/player_attack.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/assets/units/player/player_jumpandfall.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/assets/units/player/player_roll.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/assets/units/player/player_shield.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/assets/units/player/static.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/assets/units/prince.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/assets/units/shaman.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/assets/units/skeleton.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/assets/units/slime/die.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/assets/units/slime/move.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/assets/units/slime/slime.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/assets/units/slime/static.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/assets/units/zombie.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/assets/圖檔/圖檔/Basic Grass Biom things 12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/assets/圖檔/圖檔/Basic Grass Biom things2.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/assets/圖檔/圖檔/Free_Chicken_House 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/assets/圖檔/圖檔/Free_Chicken_House 1.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/assets/圖檔/圖檔/Grass1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/assets/圖檔/圖檔/Grass1.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/assets/圖檔/圖檔/Hills1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/assets/圖檔/圖檔/Hills1.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/assets/圖檔/圖檔/Water1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/assets/圖檔/圖檔/Water1.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/assets/圖檔/圖檔/Wood Bridge 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/assets/圖檔/圖檔/Wood Bridge 1.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/assets/圖檔/圖檔/plainsbig.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/assets/圖檔/圖檔/tileset2.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/bin/item/Amulet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/bin/item/DistUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/bin/item/Elixir.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/bin/item/Item.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/bin/item/Sword.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/bin/item/Tome.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/bin/item/UnitsData$Record.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/bin/item/UnitsData.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/bin/monster/AggressiveMonster.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/bin/monster/PassiveMonster.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/bin/observer/MonsterAttackObservable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/bin/observer/MonsterAttackObserver.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/bin/observer/PlayerAttackObservable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/bin/observer/PlayerAttackObserver.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/bin/observer/PlayerChatObservable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/bin/observer/PlayerChatObserver.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/bin/observer/PlayerMoveObservable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/bin/observer/PlayerMoveObserver.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/bin/role/Camera.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/bin/role/Player.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/bin/role/RPG.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/bin/role/StatusPanel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/bin/role/Unit.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/bin/role/Villagers.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/bin/role/World.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/bin/units.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/data/dialogue.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/data/items.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/data/units.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/data/units.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/lib/gson-2.10.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/lib/jinput.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/lib/libjinput-osx.dylib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/lib/liblwjgl.dylib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/lib/lwjgl.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/lib/openal.dylib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/lib/slick.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/out/production/RPG/item/Amulet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/out/production/RPG/item/Apple.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/out/production/RPG/item/DistUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/out/production/RPG/item/Elixir.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/out/production/RPG/item/Item.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/out/production/RPG/item/Sword.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/out/production/RPG/item/Tome.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/out/production/RPG/item/UnitsData$Record.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/out/production/RPG/item/UnitsData.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/out/production/RPG/item/item.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/out/production/RPG/observer/MonsterAttackObservable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/out/production/RPG/observer/MonsterAttackObserver.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/out/production/RPG/observer/PlayerAttackObservable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/out/production/RPG/observer/PlayerAttackObserver.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/out/production/RPG/observer/PlayerChatObservable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/out/production/RPG/observer/PlayerChatObserver.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/out/production/RPG/observer/PlayerMoveObservable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/out/production/RPG/observer/PlayerMoveObserver.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/out/production/RPG/role/Camera.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/out/production/RPG/role/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/out/production/RPG/role/Memento.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/out/production/RPG/role/RPG.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/out/production/RPG/role/StartPanel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/out/production/RPG/role/StatusPanel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/out/production/RPG/role/World.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/out/production/RPG/role/terminatePanel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/out/production/RPG/units.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/src/RPG.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/src/item/Amulet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/src/item/Apple.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/src/item/DistUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/src/item/Elixir.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/src/item/Item.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/src/item/ItemAction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/src/item/Sword.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/src/item/Tome.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/src/item/UnitsData.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/src/item/item.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/src/observer/MonsterAttackObservable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/src/observer/MonsterAttackObserver.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/src/observer/PlayerAttackObservable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/src/observer/PlayerAttackObserver.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/src/observer/PlayerChatObservable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/src/observer/PlayerChatObserver.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/src/observer/PlayerMoveObservable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/src/observer/PlayerMoveObserver.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/src/out/production/RPG/RPG.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/src/role/Camera.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/src/role/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/src/role/Memento.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/src/role/RPG.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/src/role/StartPanel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/src/role/StatusPanel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/src/role/World.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/src/role/terminatePanel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/src/role/unit/Player.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/src/role/unit/Unit.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/src/role/unit/Villager/Bedivere.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/src/role/unit/Villager/BedivereProduct.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/src/role/unit/Villager/Guinevere.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/src/role/unit/Villager/GuinevereProduct.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/src/role/unit/Villager/Lancelot.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/src/role/unit/Villager/LancelotProduct.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/src/role/unit/Villager/VillagersProduct.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/src/role/unit/Villager/VillagersTemplete.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/src/role/unit/monster/AggressiveMonster.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/src/role/unit/monster/PassiveMonster.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/src/units.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/classDig.nomnoml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/hamcrest-core-1.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/junit-4.13.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src.drawio" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -19,41 +259,41 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo">{
-  &quot;customColor&quot;: &quot;&quot;,
-  &quot;associatedIndex&quot;: 1
-}</component>
-  <component name="ProjectId" id="2WIaDk9CWocVq7HxMW4tlRrtGjp" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 1
+}]]></component>
+  <component name="ProjectId" id="2ZRiMQGu4fTijqZ8SoeBQ5sHaLW" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Main.executor": "Debug",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/selab/IdeaProjects/OOTW2/RPG/src",
+    "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ah_flowey\Documents\OOTW2\assets" />
+    </key>
+  </component>
   <component name="RunManager">
-    <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="20" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="role.Main" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/RPG" />
+      <module name="OOTW2" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="role.*" />
@@ -64,29 +304,43 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-21.0.1-openjdk-21.0.1-3183f394aec4-7d648f2c" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
-    <task active="true" id="Default" summary="默认任务">
-      <changelist id="a2d0ce75-c952-41d8-a0cc-8e2bbd07a616" name="更改" comment="" />
-      <created>1696422432425</created>
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cba2c64e-6dab-4476-bc43-f5e3b279c047" name="Changes" comment="" />
+      <created>1702391248275</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1696422432425</updated>
-      <workItem from="1696424709789" duration="307000" />
-      <workItem from="1696429110299" duration="368000" />
-      <workItem from="1699440842707" duration="84000" />
-      <workItem from="1699440950821" duration="63000" />
-      <workItem from="1702295336727" duration="120000" />
-      <workItem from="1702295465703" duration="645000" />
+      <updated>1702391248275</updated>
+      <workItem from="1702391251248" duration="11269000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="XSLT-Support.FileAssociations.UIState">
-    <expand />
-    <select />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
