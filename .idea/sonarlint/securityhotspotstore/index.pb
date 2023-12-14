@@ -59,3 +59,6 @@ G
 .idea/libraries/lib.xml,5\6\563a23e064e6fdd2d09bd0c2d99ef456aff71a31
 Å
 Q.idea/sonarlint/securityhotspotstore/3/1/31f02413d6268cf3017987f5c7243b93e3a48e9b,8\2\82768d1cad993fdc772a25488a79bbaaa42c9148
+:
+
+.gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
