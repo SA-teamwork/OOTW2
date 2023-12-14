@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cba2c64e-6dab-4476-bc43-f5e3b279c047" name="Changes" comment="檔案結構重整，統一字體管理">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
-    </list>
+    <list default="true" id="cba2c64e-6dab-4476-bc43-f5e3b279c047" name="Changes" comment="垃圾去除" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,6 +19,20 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "lin-roger"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="604a6c31-983e-4cf3-ac33-bbf0a839f529" />
+        <option name="url" value="https://github.com/SA-teamwork/OOTW2.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -95,7 +105,7 @@
       <option name="presentableId" value="Default" />
       <updated>1702391248275</updated>
       <workItem from="1702391251248" duration="11269000" />
-      <workItem from="1702540713237" duration="355000" />
+      <workItem from="1702540713237" duration="689000" />
     </task>
     <task id="LOCAL-00001" summary="檔案結構重整，統一字體管理">
       <option name="closed" value="true" />
@@ -105,7 +115,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702540964042</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="垃圾去除">
+      <option name="closed" value="true" />
+      <created>1702541184553</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1702541184553</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -124,6 +142,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="檔案結構重整，統一字體管理" />
-    <option name="LAST_COMMIT_MESSAGE" value="檔案結構重整，統一字體管理" />
+    <MESSAGE value="垃圾去除" />
+    <option name="LAST_COMMIT_MESSAGE" value="垃圾去除" />
   </component>
 </project>

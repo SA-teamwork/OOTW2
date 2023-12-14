@@ -1,0 +1,8 @@
+
+g
+java:S2095("LUse try-with-resources or close this "BufferedReader" in a "finally" clause.(µ¢î™üÿÿÿÿ
+^
+java:S2095'"HUse try-with-resources or close this "FileReader" in a "finally" clause.(ÅÛòª
+U
+java:S6213,":Rename this variable to not match a restricted identifier.(ûËÃ€üÿÿÿÿ
+E	java:S1065"+Replace this use of System.out by a logger.(š¨¢Àþÿÿÿÿ
