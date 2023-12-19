@@ -14,10 +14,9 @@ public class Item implements PlayerMoveObserver {
 	private String name;
 	private boolean visible;
 	private boolean immediate;
-	private ItemAction ia;
-	// TODO: 抽出-介面
+	private ItemCommand ia;
 
-	public Item(Item i) {
+	public Item(Item i, Player p) {
 		img = i.img.copy();
 		posx = i.posx;
 		posy = i.posy;
@@ -27,7 +26,7 @@ public class Item implements PlayerMoveObserver {
 		ia = i.ia;
 	}
 
-	public Item(String img_path, double posx, double posy, String name)
+	public Item(String img_path, double posx, double posy, String name, Player p)
 			throws SlickException {
 		this.img = new Image(img_path);
 		this.posx = posx;
@@ -35,11 +34,11 @@ public class Item implements PlayerMoveObserver {
 		this.name = name;
 		this.visible = true;
 		this.immediate = false;
-		this.ia = ItemActionInit();
+		this.ia = ItemActionInit(p);
 
 	}
 
-	public Item(String img_path, double posx, double posy, String name, Boolean immediate)
+	public Item(String img_path, double posx, double posy, String name, Boolean immediate, Player p)
 			throws SlickException {
 		this.img = new Image(img_path);
 		this.posx = posx;
@@ -47,23 +46,23 @@ public class Item implements PlayerMoveObserver {
 		this.name = name;
 		this.visible = true;
 		this.immediate = immediate;
-		this.ia = ItemActionInit();
+		this.ia = ItemActionInit(p);
 	}
 
-	private ItemAction ItemActionInit() {
+	private ItemCommand ItemActionInit(Player p) {
 		switch (name) {
 			default:
-				return new Apple();
+				return new cmdAddHP(p);
 			case "amulet":
-				return new Amulet();
+				return new cmdAddMaxHP(p);
 			case "sword":
-				return new Sword();
+				return new cmdAddATK(p);
 			case "tome":
-				return new Tome();
+				return new cmdMinusCD(p);
 			case "elixir":
-				return new Elixir();
+				return new cmdSetElixir(p);
 			case "apple":
-				return new Apple();
+				return new cmdAddHP(p);
 		}
 	}
 
@@ -111,7 +110,7 @@ public class Item implements PlayerMoveObserver {
 				if (!immediate) {
 					player.putItem(this);
 				}
-				ia.action(player);
+				ia.Execute();
 				setVisible(false);
 			}
 		}

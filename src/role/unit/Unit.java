@@ -6,6 +6,7 @@ import org.newdawn.slick.Image;
 import org.newdawn.slick.SlickException;
 import org.newdawn.slick.SpriteSheet;
 
+import role.FontMgr;
 import role.Main;
 import role.World;
 
@@ -50,6 +51,8 @@ public class Unit {
      */
     private long resurgenceTimer = 0L;
 
+    private FontMgr fontMgr;
+
     public Unit(Unit u) {
         this.posx = u.posx;
         this.posy = u.posy;
@@ -58,6 +61,7 @@ public class Unit {
         this.MAX_HP = u.MAX_HP;
         this.attack = u.attack;
         this.coolDownTime = u.coolDownTime;
+        this.fontMgr = FontMgr.getFontMgr();
 
         if (u.img != null) {
             this.img = u.img.copy();
@@ -107,6 +111,7 @@ public class Unit {
         this.CoolDown = CoolDown;
         this.name = name;
         this.resurgence = resurgence;
+        this.fontMgr = FontMgr.getFontMgr();
     }
 
     public Unit(String image_path, int tw, int th, double posx, double posy, int MAX_HP, int attack, int CoolDown,
@@ -166,6 +171,7 @@ public class Unit {
         this.name = name;
         this.resurgence = resurgence;
         this.atkble = atkble;
+        this.fontMgr = FontMgr.getFontMgr();
     }
 
     public String getName() {

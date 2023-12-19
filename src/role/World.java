@@ -107,7 +107,7 @@ public class World implements Cloneable{
 
         this.items = new Item[w.items.length];
         for (int i = 0; i < w.items.length; i++) {
-            this.items[i] = new Item(w.items[i]);
+            this.items[i] = new Item(w.items[i], this.player);
             this.player.addMoveObserver(this.items[i]);
         }
 
@@ -157,10 +157,10 @@ public class World implements Cloneable{
         int numOfApple = 12;
         items = new Item[4 + numOfApple];
 
-        items[0] = new Item(Main.ASSETS_PATH + "/items/amulet.png", 965, 3563, "amulet");
-        items[1] = new Item(Main.ASSETS_PATH + "/items/sword.png", 546, 6707, "sword");
-        items[2] = new Item(Main.ASSETS_PATH + "/items/tome.png", 4791, 1253, "tome");
-        items[3] = new Item(Main.ASSETS_PATH + "/items/elixir.png", 1976, 402, "elixir");
+        items[0] = new Item(Main.ASSETS_PATH + "/items/amulet.png", 965, 3563, "amulet", this.player);
+        items[1] = new Item(Main.ASSETS_PATH + "/items/sword.png", 546, 6707, "sword", this.player);
+        items[2] = new Item(Main.ASSETS_PATH + "/items/tome.png", 4791, 1253, "tome", this.player);
+        items[3] = new Item(Main.ASSETS_PATH + "/items/elixir.png", 1976, 402, "elixir", this.player);
 
         int x = getMapWidth();
         int y = getMapHeight();
@@ -174,7 +174,7 @@ public class World implements Cloneable{
                 ry = Math.random() * y;
             }
 
-            items[3 + i] = new Item(Main.ASSETS_PATH + "/items/apple.png", rx, ry, "apple", true);
+            items[3 + i] = new Item(Main.ASSETS_PATH + "/items/apple.png", rx, ry, "apple",true, this.player);
             player.addMoveObserver(items[3 + i]);
         }
 
