@@ -1,15 +1,15 @@
 package role;
 
-import java.util.LinkedHashMap;
-
+import fontMgr.FontMgr;
+import item.Item;
+import observer.PlayerMoveObserver;
 import org.newdawn.slick.Color;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.Image;
 import org.newdawn.slick.SlickException;
-
-import item.Item;
-import observer.PlayerMoveObserver;
 import role.unit.Player;
+
+import java.util.LinkedHashMap;
 
 public class StatusPanel implements PlayerMoveObserver {
 
@@ -98,7 +98,7 @@ public class StatusPanel implements PlayerMoveObserver {
         text_x = (int) (posx + 15);
         text_y = (int) (posy + 25);
         g.setColor(LABEL);
-        fontMgr.drawString_LT("Silver_para", text_x, text_y, "Health:");
+        fontMgr.drawString("Silver_para", text_x, text_y, "Health:", 0);
         text = String.valueOf(player.getHP()) + '/' + String.valueOf(player.getMAX_HP());
 
         bar_x = (int) (posx + 90);
@@ -112,7 +112,7 @@ public class StatusPanel implements PlayerMoveObserver {
         g.setColor(BAR);
         g.fillRect(bar_x, bar_y, hp_bar_width, bar_height);
         g.setColor(VALUE);
-        fontMgr.drawString_LT("Silver_para", text_x, text_y, text);
+        fontMgr.drawString("Silver_para", text_x, text_y, text, 0);
 
         // Display the player's damage and cooldown
         text_x = (int) (posx + 200);
@@ -121,10 +121,10 @@ public class StatusPanel implements PlayerMoveObserver {
         text_x += 80;
         text = String.valueOf(player.getAttack());
         g.setColor(VALUE);
-        fontMgr.drawString_LT("Silver_para", text_x, text_y, text);
+        fontMgr.drawString("Silver_para", text_x, text_y, text, 0);
         text_x += 40;
         g.setColor(LABEL);
-        fontMgr.drawString_LT("Silver_para", text_x, text_y, "Rate:");
+        fontMgr.drawString("Silver_para", text_x, text_y, "Rate:", 0);
 
         bar_x = text_x + 55;
         bar_side -= 40;
@@ -137,11 +137,11 @@ public class StatusPanel implements PlayerMoveObserver {
         text_x = bar_x + 10;
         text = String.valueOf(player.getCoolDown());
         g.setColor(VALUE);
-        fontMgr.drawString_LT("Silver_para", text_x, text_y, text);
+        fontMgr.drawString("Silver_para", text_x, text_y, text, 0);
 
         // Display the player's inventory
         g.setColor(LABEL);
-        fontMgr.drawString_LT("Silver_para", text_x + 50, text_y, "Items:");
+        fontMgr.drawString("Silver_para", text_x + 50, text_y, "Items:", 0);
 
         int item_side = 72;
         bar_side = 60;

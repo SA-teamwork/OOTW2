@@ -5,18 +5,57 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="91a111b8-e3af-480b-8c06-22da3c0c0212" name="Changes" comment="cmd">
+      <change afterPath="$PROJECT_DIR$/src/fontMgr/CenterCenter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/fontMgr/CenterDown.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/fontMgr/CenterTop.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/fontMgr/LeftCenter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/fontMgr/LeftDown.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/fontMgr/LeftTop.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/fontMgr/PosStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/fontMgr/RightCenter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/fontMgr/RightDown.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/fontMgr/RightTop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/e/ae82efbffcf4a550e227bcaf39411963585d744b" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/e/ae82efbffcf4a550e227bcaf39411963585d744b" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/item/DistUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/role/DistUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/item/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/item/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/item/UnitsData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/role/UnitsData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/item/ItemCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/item/ItemCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/item/cmdAddATK.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/item/cmdAddATK.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/item/cmdAddHP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/item/cmdAddHP.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/item/cmdAddMaxHP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/item/cmdAddMaxHP.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/item/cmdMinusCD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/item/cmdMinusCD.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/item/cmdSetElixir.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/item/cmdSetElixir.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/item/item.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/item/item.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/observer/MonsterAttackObservable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/observer/MonsterAttackObservable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/observer/MonsterAttackObserver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/observer/MonsterAttackObserver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/observer/PlayerAttackObservable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/observer/PlayerAttackObservable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/observer/PlayerAttackObserver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/observer/PlayerAttackObserver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/observer/PlayerChatObservable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/observer/PlayerChatObservable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/observer/PlayerChatObserver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/observer/PlayerChatObserver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/observer/PlayerMoveObservable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/observer/PlayerMoveObservable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/observer/PlayerMoveObserver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/observer/PlayerMoveObserver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/role/Camera.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/role/Camera.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/role/DistUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/role/DistUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/role/FontMgr.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fontMgr/FontMgr.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/role/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/role/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/role/RPG.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/role/RPG.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/role/StartPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/role/StartPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/role/StatusPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/role/StatusPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/role/UnitsData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/role/UnitsData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/role/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/role/World.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/role/terminatePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/role/terminatePanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/role/unit/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/role/unit/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/role/unit/Unit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/role/unit/Unit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/role/unit/Villager/Bedivere.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/role/unit/Villager/Bedivere.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/role/unit/Villager/BedivereProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/role/unit/Villager/BedivereProduct.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/role/unit/Villager/Guinevere.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/role/unit/Villager/Guinevere.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/role/unit/Villager/GuinevereProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/role/unit/Villager/GuinevereProduct.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/role/unit/Villager/Lancelot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/role/unit/Villager/Lancelot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/role/unit/Villager/LancelotProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/role/unit/Villager/LancelotProduct.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/role/unit/Villager/VillagersTemplete.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/role/unit/Villager/VillagersTemplete.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/role/unit/monster/AggressiveMonster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/role/unit/monster/AggressiveMonster.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/role/unit/monster/PassiveMonster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/role/unit/monster/PassiveMonster.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/item/DistUtilsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/item/DistUtilsTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,9 +67,13 @@
       <list>
         <option value="JUnit5 Test Class" />
         <option value="JUnit3 Test Class" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="FormatOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -52,8 +95,11 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="OptimizeOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
+  </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -67,45 +113,51 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;JUnit.CameraTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CameraTest.testUpdate.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CameraTest.testUpdatePos.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.DistUtilsTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.DistUtilsTest.testDist.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TestAll.executor&quot;: &quot;Run&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;true&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit3&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit3&quot;: &quot;junit.framework.TestCase&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;create.test.in.the.same.root&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Application.Main.executor": "Debug",
+    "Downloaded.Files.Path.Enabled": "false",
+    "JUnit.CameraTest.executor": "Run",
+    "JUnit.CameraTest.testUpdate.executor": "Run",
+    "JUnit.CameraTest.testUpdatePos.executor": "Run",
+    "JUnit.DistUtilsTest.executor": "Run",
+    "JUnit.DistUtilsTest.testDist.executor": "Run",
+    "JUnit.TestAll.executor": "Run",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "true",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit3",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit3": "junit.framework.TestCase",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "create.test.in.the.same.root": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "SDKs",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "rearrange.code.on.save": "true",
+    "settings.editor.selected.configurable": "actions.on.save",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="fontMgr" />
+    </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="junit.framework.TestCase" />
       <recent name="" />
@@ -124,7 +176,7 @@
       <module name="OOTW2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="role.*" />
+          <option name="PATTERN" value="fontMgr.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -136,7 +188,7 @@
       <module name="OOTW2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="role.*" />
+          <option name="PATTERN" value="fontMgr.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -152,7 +204,7 @@
       <module name="OOTW2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="role.*" />
+          <option name="PATTERN" value="fontMgr.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -167,7 +219,7 @@
       <module name="OOTW2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="role.*" />
+          <option name="PATTERN" value="fontMgr.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -231,6 +283,7 @@
       <workItem from="1702909052887" duration="4669000" />
       <workItem from="1702982309444" duration="2818000" />
       <workItem from="1702985159002" duration="515000" />
+      <workItem from="1702985749767" duration="8337000" />
     </task>
     <task id="LOCAL-00001" summary="字體管理">
       <option name="closed" value="true" />
@@ -248,7 +301,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702985054868</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="cmd">
+      <option name="closed" value="true" />
+      <created>1702985927369</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1702985927369</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -298,5 +359,9 @@
     <MESSAGE value="字體管理" />
     <MESSAGE value="cmd" />
     <option name="LAST_COMMIT_MESSAGE" value="cmd" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

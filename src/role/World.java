@@ -5,15 +5,11 @@ package role;
  * Author: Matt Giuca <mgiuca>
  */
 
-import java.util.ArrayList;
-import java.util.List;
-
+import item.Item;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.Image;
 import org.newdawn.slick.SlickException;
 import org.newdawn.slick.tiled.TiledMap;
-
-import item.Item;
 import role.UnitsData.Record;
 import role.unit.Player;
 import role.unit.Villager.Bedivere;
@@ -23,11 +19,15 @@ import role.unit.Villager.VillagersTemplete;
 import role.unit.monster.AggressiveMonster;
 import role.unit.monster.PassiveMonster;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Represents the entire game world.
  * (Designed to be instantiated just once for the whole game).
  */
-public class World implements Cloneable{
+public class World implements Cloneable {
+    public static final int PLAYER_START_X = 756, PLAYER_START_Y = 684;
     /**
      * 被動攻擊者復活等待時間
      * 等待復活時間小於0表示角色不可以復活，一旦hp<=0，則直接滅絕。 in mills
@@ -42,7 +42,6 @@ public class World implements Cloneable{
      * 玩家復活等待時間,一旦hp不大於0，玩家可以。 in mills
      */
     private static final long PlayerResurgence = 3000L;
-    public static final int PLAYER_START_X = 756, PLAYER_START_Y = 684;
     private static final int STATUS_PANEL_X = PLAYER_START_X - Main.SCREEN_WIDTH / 2;
     private static final int STATUS_PANEL_Y = PLAYER_START_Y + Main.SCREEN_HEIGHT / 2 - Main.STATUS_PANEL_HEIGHT;
 
@@ -54,34 +53,6 @@ public class World implements Cloneable{
     private StatusPanel statusP;
     private TiledMap map;
     private Camera camera;
-
-    /**
-     * Map width, in pixels.
-     */
-    private int getMapWidth() {
-        return map.getWidth() * getTileWidth();
-    }
-
-    /**
-     * Map height, in pixels.
-     */
-    private int getMapHeight() {
-        return map.getHeight() * getTileHeight();
-    }
-
-    /**
-     * Tile width, in pixels.
-     */
-    private int getTileWidth() {
-        return map.getTileWidth();
-    }
-
-    /**
-     * Tile height, in pixels.
-     */
-    private int getTileHeight() {
-        return map.getTileHeight();
-    }
 
     private World(World w) {
         this.player = new Player(w.player);
@@ -145,6 +116,34 @@ public class World implements Cloneable{
         }
     }
 
+    /**
+     * Map width, in pixels.
+     */
+    private int getMapWidth() {
+        return map.getWidth() * getTileWidth();
+    }
+
+    /**
+     * Map height, in pixels.
+     */
+    private int getMapHeight() {
+        return map.getHeight() * getTileHeight();
+    }
+
+    /**
+     * Tile width, in pixels.
+     */
+    private int getTileWidth() {
+        return map.getTileWidth();
+    }
+
+    /**
+     * Tile height, in pixels.
+     */
+    private int getTileHeight() {
+        return map.getTileHeight();
+    }
+
     private void initStatePanel() {
         statusP = new StatusPanel(Main.ASSETS_PATH + "/panel.png", STATUS_PANEL_X, STATUS_PANEL_Y,
                 Main.SCREEN_WIDTH,
@@ -173,7 +172,7 @@ public class World implements Cloneable{
                 ry = Math.random() * y;
             }
 
-            items[3 + i] = new Item(Main.ASSETS_PATH + "/items/apple.png", rx, ry, "apple",true, this.player);
+            items[3 + i] = new Item(Main.ASSETS_PATH + "/items/apple.png", rx, ry, "apple", true, this.player);
             player.addMoveObserver(items[3 + i]);
         }
 

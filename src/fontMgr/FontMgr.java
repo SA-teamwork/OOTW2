@@ -1,14 +1,18 @@
-package role;
+package fontMgr;
 
 import org.newdawn.slick.SlickException;
 import org.newdawn.slick.UnicodeFont;
 import org.newdawn.slick.font.effects.ColorEffect;
+import org.newdawn.slick.geom.Point;
+import role.Main;
 
 import java.util.HashMap;
 
 public class FontMgr {
-    private HashMap<String, UnicodeFont> fontMap = new HashMap<>();
     private static FontMgr fontMgr = null;
+    private HashMap<String, UnicodeFont> fontMap = new HashMap<>();
+    private PosStrategy ps;
+
 
     private FontMgr() {
         addFont("Silver_Title", Main.ASSETS_PATH + "/Silver.ttf", 86, true, false);
@@ -49,29 +53,33 @@ public class FontMgr {
         }
     }
 
-    public void drawString_LT(String fontKey, float x, float y, String text) {
-        fontMap.get(fontKey).drawString(x, y, text);
+    /**
+     * @param posID \ L C R
+     *              T 0 1 2
+     *              C 3 4 5
+     *              D 6 7 8
+     */
+    public void selectPos(int posID) {
+        switch (posID) {
+            case 0 -> this.ps = new LeftTop();
+            case 1 -> this.ps = new CenterTop();
+            case 2 -> this.ps = new RightTop();
+            case 3 -> this.ps = new LeftCenter();
+            case 4 -> this.ps = new CenterCenter();
+            case 5 -> this.ps = new RightCenter();
+            case 6 -> this.ps = new LeftDown();
+            case 7 -> this.ps = new CenterDown();
+            case 8 -> this.ps = new RightDown();
+            default -> this.ps = new LeftTop();
+        }
     }
 
-    public void drawString_CC(String fontKey, float x, float y, String text) {
+    public void drawString(String fontKey, float x, float y, String text, int posID) {
         UnicodeFont font = fontMap.get(fontKey);
-        x -= (float) font.getWidth(text) / 2;
-        y -= (float) font.getHeight(text) / 2;
-        font.drawString(x, y, text);
-    }
-
-    public void drawString_CT(String fontKey, float x, float y, String text) {
-        UnicodeFont font = fontMap.get(fontKey);
-        x -= (float) font.getWidth(text) / 2;
-//        y -= (float) font.getHeight(text) / 2;
-        font.drawString(x, y, text);
-    }
-
-    public void drawString_RT(String fontKey, float x, float y, String text) {
-        UnicodeFont font = fontMap.get(fontKey);
-        x -= font.getWidth(text);
-        y -= font.getHeight(text);
-        font.drawString(x, y, text);
+        selectPos(posID);
+        Point p = new Point(x, y);
+        p = ps.computePos(font, p, text);
+        font.drawString(p.getX(), p.getY(), text);
     }
 
 }

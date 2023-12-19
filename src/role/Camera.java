@@ -1,7 +1,5 @@
 package role;
 
-import org.newdawn.slick.SlickException;
-
 import role.unit.Player;
 
 /**
@@ -9,21 +7,29 @@ import role.unit.Player;
  */
 public class Camera {
 
-    /** The unit this camera is following */
+    /**
+     * The unit this camera is following
+     */
     private Player unitFollow;
 
-    /** The width and height of the screen, Screen width, in pixels. */
+    /**
+     * The width and height of the screen, Screen width, in pixels.
+     */
     private int screenwidth;
-    /** Screen height, in pixels. */
+    /**
+     * Screen height, in pixels.
+     */
     private int screenheight;
 
-    /** The camera's position in the world, in x and y coordinates. */
+    /**
+     * The camera's position in the world, in x and y coordinates.
+     */
     private int xPos;
     private int yPos;
 
     /**
      * Create a new Camera object.
-     * 
+     *
      * @param player       The player to follow
      * @param screenwidth  The width of the viewport in pixels
      * @param screenheight The height of the viewport in pixels
@@ -50,7 +56,7 @@ public class Camera {
         updatePos((int) unitFollow.getPosx(), (int) unitFollow.getPosy());
     }
 
-    public void updatePos(int x, int y){
+    public void updatePos(int x, int y) {
         xPos = x - (screenwidth / 2);
         yPos = y - (screenheight / 2);
     }
@@ -85,7 +91,7 @@ public class Camera {
 
     /**
      * Tells the camera to follow a given unit.
-     * 
+     *
      * @param unit The new unit to follow
      */
     public void followUnit(Object unit) {

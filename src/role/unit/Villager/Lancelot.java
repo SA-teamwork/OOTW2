@@ -10,7 +10,7 @@ public class Lancelot extends VillagersTemplete {
     }
 
     public Lancelot(String image_path, int tw, int th, double posx, double posy, int MAX_HP, int attack, int CoolDown,
-            String name) throws SlickException {
+                    String name) throws SlickException {
         super(image_path, tw, th, posx, posy, MAX_HP, attack, CoolDown, name);
     }
 

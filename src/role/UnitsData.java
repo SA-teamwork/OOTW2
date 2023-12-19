@@ -9,82 +9,68 @@ import java.util.Map;
 
 public class UnitsData {
 
-	private Map<String, List<Record>> datacontext = new HashMap<>();
-	private static UnitsData instance = null;
+    private static UnitsData instance = null;
+    private Map<String, List<Record>> datacontext = new HashMap<>();
 
-	public static UnitsData getInstance(String path) {
-		if (instance == null)
-			instance = new UnitsData(path);
-		return instance;
-	}
+    /**
+     * units.dat在在classes中的位置
+     *
+     * @param path units.dat
+     */
+    private UnitsData(String path) {
+        super();
+        try {
+            FileReader file = new FileReader(path);
+            BufferedReader br = new BufferedReader(file);
+            String line = null;
+            while ((line = br.readLine()) != null) {
+                String[] its = line.split(",");
+                Record record = new Record(its[0], Integer.parseInt(its[1]), Integer.parseInt(its[2]));
+                List<Record> list = datacontext.get(its[0]);
+                if (list == null)
+                    list = new ArrayList<>();
+                list.add(record);
+                datacontext.put(its[0], list);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("读取 " + path + " 文件出错." + e.getMessage());
+        }
+    }
 
-	/**
-	 * units.dat在在classes中的位置
-	 * 
-	 * @param path units.dat
-	 */
-	private UnitsData(String path) {
-		super();
-//		path = UnitsData.class.getClassLoader().getResource(path).getPath();
+    public static UnitsData getInstance(String path) {
+        if (instance == null)
+            instance = new UnitsData(path);
+        return instance;
+    }
 
-		// String[] strArr = new String[] {"1","2","3"};
-		// String str = strArr.toString();
-		// System.out.println("Java String array to String = "+str);
+    public List<Record> getRecords(String rolekey) {
+        return datacontext.get(rolekey);
+    }
 
-		// path = (String)path.split("!").toString();
-		// path =(String)"./units.dat";
+    public static class Record {
+        private String name;
+        private int posx;
+        private int posy;
 
-//		System.out.println(path);
-		try {
-			FileReader file = new FileReader(path);
-			BufferedReader br = new BufferedReader(file);
-			String line = null;
-			while ((line = br.readLine()) != null) {
-				String[] its = line.split(",");
-				Record record = new Record(its[0], Integer.parseInt(its[1]), Integer.parseInt(its[2]));
-				List<Record> list = datacontext.get(its[0]);
-				if (list == null)
-					list = new ArrayList<>();
-				list.add(record);
-				datacontext.put(its[0], list);
-			}
-		} catch (Exception e) {
-			e.printStackTrace();
-			System.out.println("读取 " + path + " 文件出错." + e.getMessage());
-		}
-	}
+        public Record(String name, int posx, int posy) {
+            super();
+            this.name = name;
+            this.posx = posx;
+            this.posy = posy;
+        }
 
-	// public static void main(String[] args) {
-	// UnitsData d = UnitsData.getInstance("units.dat");
-	// }
+        public String getName() {
+            return name;
+        }
 
-	public List<Record> getRecords(String rolekey) {
-		return datacontext.get(rolekey);
-	}
+        public int getPosx() {
+            return posx;
+        }
 
-	public static class Record {
-		private String name;
-		private int posx;
-		private int posy;
+        public int getPosy() {
+            return posy;
+        }
 
-		public Record(String name, int posx, int posy) {
-			super();
-			this.name = name;
-			this.posx = posx;
-			this.posy = posy;
-		}
-
-		public String getName() {
-			return name;
-		}
-
-		public int getPosx() {
-			return posx;
-		}
-
-		public int getPosy() {
-			return posy;
-		}
-
-	}
+    }
 }

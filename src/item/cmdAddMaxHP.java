@@ -7,7 +7,7 @@ public class cmdAddMaxHP implements ItemCommand {
     private int hp = 80;
     private Player p;
 
-    public cmdAddMaxHP(Player p){
+    public cmdAddMaxHP(Player p) {
         this.p = p;
     }
 

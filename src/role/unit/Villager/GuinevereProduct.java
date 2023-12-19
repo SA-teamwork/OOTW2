@@ -4,7 +4,7 @@ import role.unit.Player;
 
 public class GuinevereProduct implements VillagersProduct {
 
-    private String chats[] = new String[] {
+    private String chats[] = new String[]{
             "如果你需要治癒就回到我身邊",
             "你現在看起來更健康了"
     };

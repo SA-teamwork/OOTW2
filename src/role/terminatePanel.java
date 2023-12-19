@@ -1,20 +1,14 @@
 package role;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import org.newdawn.slick.Color;
-import org.newdawn.slick.GameContainer;
-import org.newdawn.slick.Graphics;
-import org.newdawn.slick.Input;
-import org.newdawn.slick.SlickException;
+import fontMgr.FontMgr;
+import org.newdawn.slick.*;
 import org.newdawn.slick.state.BasicGameState;
 import org.newdawn.slick.state.StateBasedGame;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class terminatePanel extends BasicGameState {
-    private List<Memento> mementoList;
-    private int selectMementoIndex = 0;
-    private RPG game;
     private final String[] s = {"Type [S] to saving.",
             "Type [UP/DOWN] to select memento.",
             "Type [Z] to restore select memento.",
@@ -23,7 +17,9 @@ public class terminatePanel extends BasicGameState {
     private final String[] mes = {"Saving success!!",
             "Restore success!!",
             "Delete success!!"};
-
+    private List<Memento> mementoList;
+    private int selectMementoIndex = 0;
+    private RPG game;
     private int mes_id;
     private double mesLiveTime = 0.0;
     private double minMesLiveTime = 0.5;
@@ -47,7 +43,7 @@ public class terminatePanel extends BasicGameState {
         int y = padding[1];
         int tmp = margin;
         for (String si : s) {
-            fontMgr.drawString_LT("Silver_para", x, y, si);
+            fontMgr.drawString("Silver_para", x, y, si, 0);
             y += tmp;
         }
     }
@@ -69,21 +65,21 @@ public class terminatePanel extends BasicGameState {
                     String.valueOf(pMax + 1) + "  Total: " +
                     String.valueOf(l);
 
-            fontMgr.drawString_LT("Silver_para", x, y, bar);
+            fontMgr.drawString("Silver_para", x, y, bar, 0);
             y += tmp;
 
             for (var m = pMin; m <= pMax; m++) {
                 Memento mement = mementoList.get(m);
                 if (m == selectMementoIndex) {
-                    fontMgr.drawString_LT("Silver_para", x, y, "* " + mement.getT());
+                    fontMgr.drawString("Silver_para", x, y, "* " + mement.getT(), 0);
                     y += tmp;
                 } else {
-                    fontMgr.drawString_LT("Silver_para", x, y, mement.getT());
+                    fontMgr.drawString("Silver_para", x, y, mement.getT(), 0);
                     y += tmp;
                 }
             }
         } else {
-            fontMgr.drawString_LT("Silver_para", x, y, "0/0/0  Total: 0");
+            fontMgr.drawString("Silver_para", x, y, "0/0/0  Total: 0", 0);
         }
     }
 
@@ -100,7 +96,7 @@ public class terminatePanel extends BasicGameState {
             int w = (int) (gc.getWidth() * (minMesLiveTime - mesLiveTime) / minMesLiveTime);
             g.setColor(new Color(0.2f, 0.2f, 0.2f, 1.0f));
             g.fillRect(ss_x - w / 2, gc.getHeight() - 24, w, 24);
-            fontMgr.drawString_CT("Silver_para", ss_x, gc.getHeight() - 24, mesBeShow);
+            fontMgr.drawString("Silver_para", ss_x, gc.getHeight() - 24, mesBeShow, 1);
         }
     }
 

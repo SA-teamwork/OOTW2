@@ -1,10 +1,7 @@
 package role;
 
-import org.newdawn.slick.GameContainer;
-import org.newdawn.slick.Graphics;
-import org.newdawn.slick.Image;
-import org.newdawn.slick.Input;
-import org.newdawn.slick.SlickException;
+import fontMgr.FontMgr;
+import org.newdawn.slick.*;
 import org.newdawn.slick.state.BasicGameState;
 import org.newdawn.slick.state.StateBasedGame;
 import org.newdawn.slick.state.transition.FadeInTransition;
@@ -31,8 +28,8 @@ public class StartPanel extends BasicGameState {
     @Override
     public void render(GameContainer gc, StateBasedGame sbg, Graphics g) throws SlickException {
         g.drawImage(backGround, 0.0f, 0.0f);
-        fontMgr.drawString_CC("Silver_Title", x, y + titleDelta, title);
-        fontMgr.drawString_CC("Silver_SubTitle", x, y + titleDelta + 100, subTitle);
+        fontMgr.drawString("Silver_Title", x, y + titleDelta, title, 4);
+        fontMgr.drawString("Silver_SubTitle", x, y + titleDelta + 100, subTitle, 4);
     }
 
     @Override

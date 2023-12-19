@@ -9,9 +9,9 @@
 ## UnitsData(單例模式)
 
 初始化工具:
- List<Record> getRecords("NPC類型") 取得npc生成資訊
+List<Record> getRecords("NPC類型") 取得npc生成資訊
 
- UnitsData.Record(type, posX, posY)
+UnitsData.Record(type, posX, posY)
 
 ## DistUtils(距離計算工具函數類別)
 

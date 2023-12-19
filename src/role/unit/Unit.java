@@ -1,19 +1,12 @@
 package role.unit;
 
-import org.newdawn.slick.Color;
-import org.newdawn.slick.Graphics;
-import org.newdawn.slick.Image;
-import org.newdawn.slick.SlickException;
-import org.newdawn.slick.SpriteSheet;
-
-import role.FontMgr;
+import fontMgr.FontMgr;
+import org.newdawn.slick.*;
 import role.Main;
 import role.World;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import org.newdawn.slick.Animation;
 
 public class Unit {
     // In pixels
@@ -97,7 +90,7 @@ public class Unit {
     }
 
     public Unit(String image_path, double posx, double posy, int MAX_HP, int attack, int CoolDown, long resurgence,
-            String name)
+                String name)
             throws SlickException {
         img = new Image(image_path);
         img_flipped = img.getFlippedCopy(true, false);
@@ -115,19 +108,19 @@ public class Unit {
     }
 
     public Unit(String image_path, int tw, int th, double posx, double posy, int MAX_HP, int attack, int CoolDown,
-            long resurgence, String name, boolean atkble)
+                long resurgence, String name, boolean atkble)
             throws SlickException {
 
         String[] staticImg;
         if (atkble) {
-            staticImg = new String[] {
+            staticImg = new String[]{
                     image_path + "static.png",
                     image_path + "move.png",
                     image_path + "die.png",
                     image_path + "atk.png"
             };
         } else {
-            staticImg = new String[] {
+            staticImg = new String[]{
                     image_path + "static.png",
                     image_path + "move.png",
                     image_path + "die.png",
@@ -198,12 +191,12 @@ public class Unit {
         return posx;
     }
 
-    public double getPosy() {
-        return posy;
-    }
-
     public void setPosx(double posx) {
         this.posx = posx;
+    }
+
+    public double getPosy() {
+        return posy;
     }
 
     public void setPosy(double posy) {
@@ -224,6 +217,10 @@ public class Unit {
 
     public int getHP() {
         return HP;
+    }
+
+    public void setHP(int hP) {
+        HP = hP;
     }
 
     public void addMax_HP(int hp) {
@@ -261,10 +258,6 @@ public class Unit {
 
     public int getMAX_HP() {
         return MAX_HP;
-    }
-
-    public void setHP(int hP) {
-        HP = hP;
     }
 
     private void renderWithoutAnima() {
@@ -315,8 +308,8 @@ public class Unit {
 
     /**
      * Draw the player to the screen at the correct place.
-     * 
-     * @param g     The current Graphics context.
+     *
+     * @param g The current Graphics context.
      */
     public void render(Graphics g) {
         if (anima.size() == 0) {
@@ -349,7 +342,6 @@ public class Unit {
      * 1.如果角色已經滅絕isdeadout=true，則角色死亡。
      * 2.isdeadout=false,resurgenceTimer>0，則角色死亡。
      * 3.isdeadout=false,resurgenceTimer<=0,角色活躍著。
-     *
      */
     public boolean isActive() {
         if (!this.isdieout && resurgenceTimer <= 0)
@@ -418,7 +410,7 @@ public class Unit {
      * @param isflee   true:表示monster逃離player；false:monster靠近player
      */
     public void calculateAttackMonsterCoordinate(World world, double speed, double delta, double player_x,
-            double player_y, boolean isflee) {
+                                                 double player_y, boolean isflee) {
 
         double p_x = this.posx, p_y = this.posy;
         // 使用計算座標移動距離指令計算新的座標移動距離
@@ -472,7 +464,7 @@ public class Unit {
 
     /**
      * 計算新的座標
-     * 
+     *
      * @param dir_x The unit's movement in the x axis (-1, 0 or 1).
      * @param dir_y The unit's movement in the y axis (-1, 0 or 1).
      * @param delta Time passed since last frame (milliseconds).
@@ -513,7 +505,6 @@ public class Unit {
 
     /**
      * 繪製名稱和status,名稱居中且距離bar左右各5個像素
-     * 
      */
     protected void drawNameBar(Graphics g) {
         // 繪製狀態指示圖示（頭上方顯示角色名字和健康值）

@@ -4,7 +4,7 @@ import role.unit.Player;
 
 public class BedivereProduct implements VillagersProduct {
 
-    private String chats[] = new String[] {
+    private String chats[] = new String[]{
             "請尋找長生不老藥來治癒國王",
             "靈丹妙藥!我父親的病痊癒了!謝謝"
     };
