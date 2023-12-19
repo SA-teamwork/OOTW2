@@ -5,6 +5,7 @@ import org.newdawn.slick.Image;
 import org.newdawn.slick.SlickException;
 
 import observer.PlayerMoveObserver;
+import role.DistUtils;
 import role.unit.Player;
 
 public class Item implements PlayerMoveObserver {

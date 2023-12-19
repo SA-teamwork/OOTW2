@@ -1,4 +1,4 @@
-package item;
+package role;
 
 public class DistUtils {
 

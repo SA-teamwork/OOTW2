@@ -2,6 +2,7 @@ package item;
 
 import junit.framework.Assert;
 import junit.framework.TestCase;
+import role.DistUtils;
 
 public class DistUtilsTest extends TestCase {
     private DistUtils distUtils;

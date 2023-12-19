@@ -3,7 +3,7 @@ package role.unit.Villager;
 import org.newdawn.slick.Color;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.SlickException;
-import item.DistUtils;
+import role.DistUtils;
 import observer.PlayerChatObserver;
 import role.Main;
 import role.World;

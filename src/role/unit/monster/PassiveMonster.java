@@ -5,7 +5,7 @@ import java.util.Random;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.SlickException;
 
-import item.DistUtils;
+import role.DistUtils;
 import observer.PlayerAttackObserver;
 import role.World;
 import role.unit.Player;

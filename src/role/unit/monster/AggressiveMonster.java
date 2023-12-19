@@ -7,7 +7,7 @@ import java.util.Random;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.SlickException;
 
-import item.DistUtils;
+import role.DistUtils;
 import observer.MonsterAttackObservable;
 import observer.MonsterAttackObserver;
 import observer.PlayerAttackObserver;

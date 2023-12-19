@@ -28,12 +28,6 @@ A
 src/role/RPG.java,6\0\6056f3c8f90496a2411d2b8354d77d0ace230738
 E
 src/role/FontMgr.java,a\c\ac9a2ff7bb3746c1e0787e9abe5b563c0c247103
-G
-src/item/UnitsData.java,2\8\2846edecf5e92a721841896f1a78e3d5ef43f6cb
-B
-src/item/Tome.java,0\b\0b5e0e8b85c1f4a6118d4c8e3bf8fc920af4255c
-C
-src/item/Sword.java,a\c\ac3de68a6e856722de2fb0dd30df799f61265c97
 @
 src/item/item.md,0\7\07bff166a89ba365376b5cfb7b867e90c25e863c
 B
@@ -42,8 +36,6 @@ L
 src/role/terminatePanel.java,c\5\c5644bbc9c778001a548ea92e65743ab771fb782
 H
 src/role/StartPanel.java,9\5\95541edc5c83e2ab409aa0a61b3e7b998fa8290a
-G
-src/item/DistUtils.java,b\7\b7d28f1a97e38f47290239472f75d197a943984f
 L
 test/item/DistUtilsTest.java,d\3\d36d8687c63ce8469c514517614f98f69ed37186
 A
@@ -54,18 +46,10 @@ I
 -src/role/unit/Villager/VillagersTemplete.java,f\9\f9d7fee371a6613dc253d47f72d0e685871192f1
 \
 ,src/role/unit/monster/AggressiveMonster.java,9\2\925d520f50e7ac6de8b5f2417c1c08329afce06f
-D
-src/item/Amulet.java,2\5\2565f7a98749cd76312bdec463986c4fbbaaf364
-D
-src/item/Elixir.java,5\4\5441f58b75925e3b4e4174f68b84f2efd844cadd
-H
-src/item/ItemAction.java,0\d\0d70c20f183c2145a4cf5a3824a70837d3b8ae42
 I
 src/item/ItemCommand.java,c\4\c4889fdf05648baf59b2c3707450c8533fbb2523
 I
 src/item/cmdAddMaxHP.java,1\a\1acbd8b0bd893c256f100feef43ce0e9c302783c
-C
-src/item/Apple.java,0\d\0dc80b55d769f0937b9cd2105e12772993eb5e64
 J
 src/item/cmdSetElixir.java,f\4\f4a26b8200d4158b7b4d4c6c031e45a69158e882
 H
@@ -74,3 +58,9 @@ G
 src/item/cmdAddATK.java,6\f\6f7cef151ccc530a31073d9af2785c65830ff6b4
 F
 src/item/cmdAddHP.java,b\5\b54ec07abd9a95e0cd891b96a0e5a98870ae2f8c
+G
+src/role/DistUtils.java,2\3\231efc46fc969d147fb5a72b74070260e52d78cd
+Y
+)src/role/unit/monster/PassiveMonster.java,8\a\8a5154736a9bc8985e116e8a01ab195a405b12a7
+G
+src/role/UnitsData.java,9\1\910c0f8c1f0974bc137daea922b50bd40d69eb90

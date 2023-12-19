@@ -4,22 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="91a111b8-e3af-480b-8c06-22da3c0c0212" name="Changes" comment="字體管理">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/item/cmdAddATK.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/item/cmdAddHP.java" afterDir="false" />
+    <list default="true" id="91a111b8-e3af-480b-8c06-22da3c0c0212" name="Changes" comment="cmd">
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/item/Amulet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/item/cmdAddMaxHP.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/item/Apple.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/item/Elixir.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/item/cmdSetElixir.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/item/DistUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/role/DistUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/item/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/item/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/item/ItemAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/item/ItemCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/item/Sword.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/item/Tome.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/item/cmdMinusCD.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/item/UnitsData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/role/UnitsData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/role/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/role/World.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/role/unit/Unit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/role/unit/Unit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/role/unit/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/role/unit/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/role/unit/Villager/VillagersTemplete.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/role/unit/Villager/VillagersTemplete.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/role/unit/monster/AggressiveMonster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/role/unit/monster/AggressiveMonster.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/role/unit/monster/PassiveMonster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/role/unit/monster/PassiveMonster.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/item/DistUtilsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/item/DistUtilsTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +53,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -73,7 +70,7 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;Application.Main.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
     &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
     &quot;JUnit.CameraTest.executor&quot;: &quot;Run&quot;,
     &quot;JUnit.CameraTest.testUpdate.executor&quot;: &quot;Run&quot;,
@@ -112,6 +109,9 @@
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="junit.framework.TestCase" />
       <recent name="" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="role" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="item" />
@@ -152,7 +152,7 @@
       <module name="OOTW2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="item.*" />
+          <option name="PATTERN" value="role.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -167,7 +167,7 @@
       <module name="OOTW2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="item.*" />
+          <option name="PATTERN" value="role.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -229,7 +229,8 @@
       <workItem from="1702823700070" duration="346000" />
       <workItem from="1702824082894" duration="1954000" />
       <workItem from="1702909052887" duration="4669000" />
-      <workItem from="1702982309444" duration="2496000" />
+      <workItem from="1702982309444" duration="2818000" />
+      <workItem from="1702985159002" duration="515000" />
     </task>
     <task id="LOCAL-00001" summary="字體管理">
       <option name="closed" value="true" />
@@ -239,7 +240,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702981658456</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="cmd">
+      <option name="closed" value="true" />
+      <created>1702985054868</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1702985054868</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -287,6 +296,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="整理" />
     <MESSAGE value="字體管理" />
-    <option name="LAST_COMMIT_MESSAGE" value="字體管理" />
+    <MESSAGE value="cmd" />
+    <option name="LAST_COMMIT_MESSAGE" value="cmd" />
   </component>
 </project>

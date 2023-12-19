@@ -14,8 +14,7 @@ import org.newdawn.slick.SlickException;
 import org.newdawn.slick.tiled.TiledMap;
 
 import item.Item;
-import item.UnitsData;
-import item.UnitsData.Record;
+import role.UnitsData.Record;
 import role.unit.Player;
 import role.unit.Villager.Bedivere;
 import role.unit.Villager.Guinevere;
