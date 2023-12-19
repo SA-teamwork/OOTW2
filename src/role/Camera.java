@@ -45,11 +45,14 @@ public class Camera {
     /**
      * Update the game camera to re-centre its viewpoint around the player
      */
-    public void update()
-            throws SlickException {
+    public void update() {
         // Update the camera based on the player's position
-        xPos = (int) unitFollow.getPosx() - (screenwidth / 2);
-        yPos = (int) unitFollow.getPosy() - (screenheight / 2);
+        updatePos((int) unitFollow.getPosx(), (int) unitFollow.getPosy());
+    }
+
+    public void updatePos(int x, int y){
+        xPos = x - (screenwidth / 2);
+        yPos = y - (screenheight / 2);
     }
 
     /**

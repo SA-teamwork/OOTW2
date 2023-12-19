@@ -1,9 +1,0 @@
-
-g	java:S112#"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8¸ «õÅ1
-g	java:S1120"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8¹ «õÅ1
-n
-java:S1192"LDefine a constant instead of duplicating this literal "/Silver.ttf" 3 times.(’Õë‰üÿÿÿÿ8°ÀÇöÅ1
-j	java:S1004"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ïœùü8˜óá÷Å1
-o	java:S1008"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ğöïêüÿÿÿÿ8¯Şã÷Å1
-o	java:S100?"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( ‹üáÿÿÿÿÿ8÷°è÷Å1
-o	java:S100F"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(šìœ²şÿÿÿÿ8­§ä÷Å1
