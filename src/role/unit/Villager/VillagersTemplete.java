@@ -22,7 +22,7 @@ public abstract class VillagersTemplete extends Unit implements PlayerChatObserv
     private long chatperiod = 0L;
     private VillagersProduct vp;
 
-    public VillagersTemplete(VillagersTemplete v) {
+    protected VillagersTemplete(VillagersTemplete v) {
         super(v);
         this.chat = v.chat;
         this.chatvisible = v.chatvisible;

@@ -59,7 +59,7 @@ public class Main extends StateBasedGame {
       工廠-
       模板-
       原型
-      代理
+      策略-
       迭代
       命令-
       */

@@ -60,12 +60,12 @@ public class RPG extends BasicGameState {
         if (input.isKeyDown(Input.KEY_RIGHT))
             dir_x += 1;
 
-        // talk with villager
+        // talk with villager.
         if (input.isKeyPressed(Input.KEY_T)) {
             world.openChat(delta);
         }
 
-        // player attack villagers
+        // player attack villagers.
         if (input.isKeyDown(Input.KEY_A)) {
             world.operatePlayerAttack(dir_x, dir_y, delta);
         }

@@ -26,8 +26,6 @@ G
 .env,3\c\3c84dcdc6bbe3d7817c49dcdc327b926fea1808a
 A
 src/role/RPG.java,6\0\6056f3c8f90496a2411d2b8354d77d0ace230738
-E
-src/role/FontMgr.java,a\c\ac9a2ff7bb3746c1e0787e9abe5b563c0c247103
 @
 src/item/item.md,0\7\07bff166a89ba365376b5cfb7b867e90c25e863c
 B
@@ -70,8 +68,6 @@ T
 $src/role/unit/Villager/Bedivere.java,f\3\f3af11e04e480906329edb58d49ff64aa616148a
 H
 src/fontMgr/FontMgr.java,4\5\45c6fa1a7129d5ba244ff216982bdcdba164db9d
-O
-src/fontMgr/LeftTopFontMgr.java,7\3\737bf81e5fbf3c6a05570ae2d9e2da77edd95a70
 L
 src/fontMgr/PosStrategy.java,9\a\9a58cb289af9de331910060c295fb68c8f92aff1
 H
@@ -118,3 +114,9 @@ V
 &src/observer/PlayerMoveObservable.java,7\5\759cfa747ff25dcc44271efa9877e4fb001df47d
 W
 'src/observer/MonsterAttackObserver.java,8\a\8ac387fb645d4c10b32e6222459e44c92cccde17
+E
+src/role/Memento.java,a\c\ac74ebfd65317f90d034460390db8d6d32cc9ec0
+L
+src/role/unitRefct/Unit.java,6\5\65e0a41b7527264f89b679d6597b5daf22eb36e2
+N
+src/role/unitRefct/Player.java,5\d\5dcd5494eed84951c3c0c8b85c34d93ba2d509f2
