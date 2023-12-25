@@ -2,12 +2,12 @@ package item;
 
 import role.unit.Player;
 
-public class cmdMinusCD implements ItemCommand {
+public class MinusCdCmd extends ItemCommand {
     private int cooldown = -300;
 
     private Player p;
 
-    public cmdMinusCD(Player p) {
+    public MinusCdCmd(Player p) {
         this.p = p;
     }
 

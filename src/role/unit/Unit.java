@@ -8,15 +8,15 @@ import role.World;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Unit {
+public abstract class Unit {
     // In pixels
     private double posx;
     private double posy;
-    private int CoolDown;
+    private int MAX_CD;
     private int HP;
     private int MAX_HP;
     private int attack;
-    private int coolDownTime = 30;
+    private int CD = 30;
     private Image img = null;
     private Image img_flipped = null;
     private double width, height;
@@ -49,11 +49,11 @@ public class Unit {
     public Unit(Unit u) {
         this.posx = u.posx;
         this.posy = u.posy;
-        this.CoolDown = u.CoolDown;
+        this.MAX_CD = u.MAX_CD;
         this.HP = u.HP;
         this.MAX_HP = u.MAX_HP;
         this.attack = u.attack;
-        this.coolDownTime = u.coolDownTime;
+        this.CD = u.CD;
         this.fontMgr = FontMgr.getFontMgr();
 
         if (u.img != null) {
@@ -89,7 +89,7 @@ public class Unit {
         this.resurgenceTimer = u.resurgenceTimer;
     }
 
-    public Unit(String image_path, double posx, double posy, int MAX_HP, int attack, int CoolDown, long resurgence,
+    public Unit(String image_path, double posx, double posy, int MAX_HP, int attack, int MAX_CD, long resurgence,
                 String name)
             throws SlickException {
         img = new Image(image_path);
@@ -101,13 +101,13 @@ public class Unit {
         this.HP = MAX_HP;
         this.MAX_HP = MAX_HP;
         this.attack = attack;
-        this.CoolDown = CoolDown;
+        this.MAX_CD = MAX_CD;
         this.name = name;
         this.resurgence = resurgence;
         this.fontMgr = FontMgr.getFontMgr();
     }
 
-    public Unit(String image_path, int tw, int th, double posx, double posy, int MAX_HP, int attack, int CoolDown,
+    public Unit(String image_path, int tw, int th, double posx, double posy, int MAX_HP, int attack, int MAX_CD,
                 long resurgence, String name, boolean atkble)
             throws SlickException {
 
@@ -160,7 +160,7 @@ public class Unit {
         this.HP = MAX_HP;
         this.MAX_HP = MAX_HP;
         this.attack = attack;
-        this.CoolDown = CoolDown;
+        this.MAX_CD = MAX_CD;
         this.name = name;
         this.resurgence = resurgence;
         this.atkble = atkble;
@@ -211,8 +211,8 @@ public class Unit {
         return width;
     }
 
-    public int getCoolDown() {
-        return CoolDown;
+    public int getMAX_CD() {
+        return MAX_CD;
     }
 
     public int getHP() {
@@ -225,7 +225,7 @@ public class Unit {
 
     public void addMax_HP(int hp) {
         this.MAX_HP += hp;
-        this.HP += hp;
+//        this.HP += hp;
     }
 
     public void addHP(int hp) {
@@ -241,19 +241,19 @@ public class Unit {
     }
 
     public void addCoolDown(int CoolDown) {
-        this.CoolDown += CoolDown;
+        this.MAX_CD += CoolDown;
     }
 
     public int getAttack() {
         return attack;
     }
 
-    public int getCoolDownTime() {
-        return coolDownTime;
+    public int getCD() {
+        return CD;
     }
 
     public void startCoolDownTime() {
-        this.coolDownTime = CoolDown;
+        this.CD = MAX_CD;
     }
 
     public int getMAX_HP() {
@@ -286,11 +286,11 @@ public class Unit {
 
     private void renderAnima_CanAtk() {
         if (this.isActive()) {
-            if (this.getCoolDownTime() <= 0) {
+            if (this.getCD() <= 0) {
                 this.anima.get(3).restart();
                 this.anima_flipped.get(3).restart();
                 renderMoveAnima();
-            } else if (this.getCoolDownTime() > 0) {
+            } else if (this.getCD() > 0) {
                 renderDirectly(3);
             }
         } else if (!this.anima_flipped.get(2).isStopped() && !this.anima.get(2).isStopped()) {
@@ -344,10 +344,7 @@ public class Unit {
      * 3.isdeadout=false,resurgenceTimer<=0,角色活躍著。
      */
     public boolean isActive() {
-        if (!this.isdieout && resurgenceTimer <= 0)
-            return true;
-        else
-            return false;
+        return !this.isdieout && resurgenceTimer <= 0;
     }
 
     public void update(World world, int dir_x, int dir_y, int delta) {
@@ -357,8 +354,8 @@ public class Unit {
             if (this.resurgenceTimer <= 0) {
                 comeBack();
             }
-        } else if (this.isActive() && this.coolDownTime > 0) {
-            this.coolDownTime -= delta;
+        } else if (this.isActive() && this.CD > 0) {
+            this.CD -= delta;
         }
     }
 
@@ -367,7 +364,7 @@ public class Unit {
      */
     public void comeBack() {
         this.HP = this.MAX_HP;
-        this.coolDownTime = 0;
+        this.CD = 0;
         try {
             this.anima.get(2).restart();
             this.anima.get(3).restart();
@@ -395,14 +392,14 @@ public class Unit {
     }
 
     public double getCooldownPercentage() {
-        return (double) coolDownTime / (double) CoolDown;
+        return (double) CD / (double) MAX_CD;
     }
 
     /**
      * implement the Algorithm 1
      * 用於計算monster被player攻擊或和player戰鬥時移動的座標
      *
-     * @param world
+     * @param world    word
      * @param speed    速度
      * @param delta    delta Time passed since last frame (milliseconds).
      * @param player_x player的x座標
@@ -455,11 +452,7 @@ public class Unit {
             posy = new_y;
         }
 
-        if (posx == p_x && posy == p_y) {
-            this.isMove = false;
-        } else {
-            this.isMove = true;
-        }
+        this.isMove = posx != p_x || posy != p_y;
     }
 
     /**
@@ -496,11 +489,7 @@ public class Unit {
             posy = new_y;
         }
 
-        if (posx == p_x && posy == p_y) {
-            this.isMove = false;
-        } else {
-            this.isMove = true;
-        }
+        this.isMove = posx != p_x || posy != p_y;
     }
 
     /**

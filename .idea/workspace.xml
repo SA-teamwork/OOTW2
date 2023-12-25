@@ -5,13 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="91a111b8-e3af-480b-8c06-22da3c0c0212" name="Changes" comment="格式化、策略模式">
-      <change afterPath="$PROJECT_DIR$/src/role/unitRefct/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/item/CompositeCmd.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/item/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/item/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/item/ItemCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/item/ItemCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/item/cmdAddATK.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/item/AddAtkCmd.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/item/cmdAddHP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/item/AddHpCmd.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/item/cmdAddMaxHP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/item/AddMaxHpCmd.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/item/cmdMinusCD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/item/MinusCdCmd.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/item/cmdSetElixir.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/item/SetElixirCmd.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/role/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/role/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/role/RPG.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/role/RPG.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/role/unit/Villager/VillagersTemplete.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/role/unit/Villager/VillagersTemplete.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/role/Memento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/role/Memento.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/role/StatusPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/role/StatusPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/role/unit/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/role/unit/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/role/unit/Unit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/role/unit/Unit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/role/unit/monster/AggressiveMonster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/role/unit/monster/AggressiveMonster.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,6 +121,8 @@
 }</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="item" />
+      <recent name="role.unit.decorator" />
       <recent name="fontMgr" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">

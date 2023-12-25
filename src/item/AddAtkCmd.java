@@ -2,18 +2,18 @@ package item;
 
 import role.unit.Player;
 
-public class cmdAddMaxHP implements ItemCommand {
+public class AddAtkCmd extends ItemCommand {
 
-    private int hp = 80;
+    private int damage = 30;
+
     private Player p;
 
-    public cmdAddMaxHP(Player p) {
+    public AddAtkCmd(Player p) {
         this.p = p;
     }
 
     @Override
     public void Execute() {
-        p.addMax_HP(hp);
+        p.addAttack(damage);
     }
-
 }

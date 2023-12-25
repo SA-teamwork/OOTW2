@@ -116,7 +116,7 @@ public class Player extends Unit
      */
     public void attack(int dir_x, int dir_y, int delta) {
         // Can ATK?
-        if (this.getCoolDownTime() <= 0) {
+        if (this.getCD() <= 0) {
             // Random DMG
             int attValue = rd.nextInt(this.getAttack());
             this.notifyAttackObservers(dir_x, dir_y, this.getPosx(), this.getPosy(), delta, attValue);

@@ -8,7 +8,7 @@ public class Memento {
     private String t;
     private int pw;
 
-    public int setWorld(World w) throws CloneNotSupportedException {
+    public int setWorld(World w) {
         LocalDateTime t = LocalDateTime.now();
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
         this.t = dtf.format(t);

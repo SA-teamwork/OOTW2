@@ -26,8 +26,7 @@ public class Item implements PlayerMoveObserver {
         ia = i.ia;
     }
 
-    public Item(String img_path, double posx, double posy, String name, Player p)
-            throws SlickException {
+    public Item(String img_path, double posx, double posy, String name, Player p) throws SlickException {
         this.img = new Image(img_path);
         this.posx = posx;
         this.posy = posy;
@@ -38,8 +37,7 @@ public class Item implements PlayerMoveObserver {
 
     }
 
-    public Item(String img_path, double posx, double posy, String name, Boolean immediate, Player p)
-            throws SlickException {
+    public Item(String img_path, double posx, double posy, String name, Boolean immediate, Player p) throws SlickException {
         this.img = new Image(img_path);
         this.posx = posx;
         this.posy = posy;
@@ -51,18 +49,27 @@ public class Item implements PlayerMoveObserver {
 
     private ItemCommand ItemActionInit(Player p) {
         switch (name) {
-            default:
-                return new cmdAddHP(p);
-            case "amulet":
-                return new cmdAddMaxHP(p);
-            case "sword":
-                return new cmdAddATK(p);
-            case "tome":
-                return new cmdMinusCD(p);
-            case "elixir":
-                return new cmdSetElixir(p);
-            case "apple":
-                return new cmdAddHP(p);
+            case "amulet" -> {
+                CompositeCmd cmd = new CompositeCmd();
+                cmd.addCmd(new AddMaxHpCmd(p));
+                cmd.addCmd(new AddHpCmd(p));
+                return cmd;
+            }
+            case "sword" -> {
+                return new AddAtkCmd(p);
+            }
+            case "tome" -> {
+                return new MinusCdCmd(p);
+            }
+            case "elixir" -> {
+                return new SetElixirCmd(p);
+            }
+            case "apple" -> {
+                return new AddHpCmd(p);
+            }
+            default -> {
+                return null;
+            }
         }
     }
 
@@ -95,8 +102,7 @@ public class Item implements PlayerMoveObserver {
     }
 
     public void render(Graphics g) {
-        if (this.img != null && this.isVisible())
-            img.drawCentered((int) posx, (int) posy);
+        if (this.img != null && this.isVisible()) img.drawCentered((int) posx, (int) posy);
     }
 
     public void action(Player player, double posx, double posy, double delta) {

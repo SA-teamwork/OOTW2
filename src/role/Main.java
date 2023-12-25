@@ -58,9 +58,9 @@ public class Main extends StateBasedGame {
       TODO:
       工廠-
       模板-
-      原型
+      原型-
       策略-
-      迭代
+      Composite-
       命令-
       */
 

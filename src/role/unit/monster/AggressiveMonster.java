@@ -98,7 +98,7 @@ public class AggressiveMonster extends Unit
      */
     public void attack(double delta) {
         // out CD?
-        if (this.getCoolDownTime() <= 0) {
+        if (this.getCD() <= 0) {
             // ramdom atk dmg
             int attValue = rd.nextInt(this.getAttack());
             // notify player

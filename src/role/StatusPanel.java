@@ -135,7 +135,7 @@ public class StatusPanel implements PlayerMoveObserver {
         g.fillRect(bar_x, bar_y, hp_bar_width, bar_height);
 
         text_x = bar_x + 10;
-        text = String.valueOf(player.getCoolDown());
+        text = String.valueOf(player.getMAX_CD());
         g.setColor(VALUE);
         fontMgr.drawString("Silver_para", text_x, text_y, text, 0);
 
