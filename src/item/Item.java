@@ -23,7 +23,7 @@ public class Item implements PlayerMoveObserver {
         name = i.name;
         visible = i.visible;
         immediate = i.immediate;
-        ia = i.ia;
+        this.ia = ItemActionInit(p);
     }
 
     public Item(String img_path, double posx, double posy, String name, Player p) throws SlickException {

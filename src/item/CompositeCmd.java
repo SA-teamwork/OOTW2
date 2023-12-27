@@ -26,4 +26,6 @@ public class CompositeCmd extends ItemCommand {
     public ItemCommand getChild(int i) {
         return cmds.get(i);
     }
+
+
 }

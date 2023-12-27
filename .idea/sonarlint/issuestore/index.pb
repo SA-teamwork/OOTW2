@@ -120,3 +120,7 @@ I
 test/item/ItemDVTest.java,6\9\6986b92ff423ab94b5ff8d91bd6c604809a5fdfb
 I
 test/item/ItemCATest.java,1\1\1110f128c5bf7f8c6183dfe923c714a1333808a9
+J
+src/item/CompositeCmd.java,4\c\4c00b8e812400e7816a347479ec8229a448c64e3
+I
+src/item/AddMaxHpCmd.java,4\3\43ce4107c79c2717f2b2003e61b9d5588ae95d69

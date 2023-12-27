@@ -4,17 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="91a111b8-e3af-480b-8c06-22da3c0c0212" name="Changes" comment="文法修正">
-      <change afterPath="$PROJECT_DIR$/test/item/ItemCATest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/item/ItemDVTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/item/ItemEETest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="91a111b8-e3af-480b-8c06-22da3c0c0212" name="Changes" comment="Test">
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/item/CompositeCmd.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/item/CompositeCmd.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/item/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/item/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/TestAll.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/item/DistUtilsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/item/DistUtilsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/item/ItemCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/item/ItemCommand.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +54,7 @@
     <option name="myRunOnSave" value="true" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -76,7 +72,7 @@
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "Application.ItemTest.executor": "Run",
-    "Application.Main.executor": "Run",
+    "Application.Main.executor": "Debug",
     "Downloaded.Files.Path.Enabled": "false",
     "JUnit.CameraTest.executor": "Run",
     "JUnit.CameraTest.testUpdate.executor": "Run",
@@ -139,7 +135,7 @@
       <recent name="role" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ItemEETest">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="ItemEETest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="item.ItemEETest" />
       <module name="OOTW2" />
@@ -215,10 +211,10 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.ItemEETest" />
         <item itemvalue="JUnit.ItemDVTest.testAction" />
         <item itemvalue="Application.ItemEETest" />
-        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.TestAll" />
       </list>
     </recent_temporary>
@@ -251,7 +247,7 @@
       <workItem from="1702985159002" duration="515000" />
       <workItem from="1702985749767" duration="18670000" />
       <workItem from="1703235932099" duration="2632000" />
-      <workItem from="1703588261482" duration="11504000" />
+      <workItem from="1703588261482" duration="13297000" />
     </task>
     <task id="LOCAL-00001" summary="字體管理">
       <option name="closed" value="true" />
@@ -285,7 +281,15 @@
       <option name="project" value="LOCAL" />
       <updated>1703007047560</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Test">
+      <option name="closed" value="true" />
+      <created>1703673578827</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1703673578827</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -335,7 +339,8 @@
     <MESSAGE value="字體管理" />
     <MESSAGE value="cmd" />
     <MESSAGE value="格式化、策略模式" />
-    <option name="LAST_COMMIT_MESSAGE" value="格式化、策略模式" />
+    <MESSAGE value="Test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Test" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
