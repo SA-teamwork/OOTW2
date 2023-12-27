@@ -9,7 +9,7 @@ import role.unit.Player;
 
 import java.io.File;
 
-public class ItemDVTest extends TestCase {
+public class ItemBVTest extends TestCase {
 
     static {
         File PATH = new File("lwjgl-2.9.3/lwjgl-2.9.3/native/windows");
