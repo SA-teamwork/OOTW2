@@ -106,6 +106,9 @@ public class Item implements PlayerMoveObserver {
     }
 
     public void action(Player player, double posx, double posy, double delta) {
+        if (player == null) {
+            throw new NullPointerException("player Can NOT be 'null'");
+        }
         // 如果物品可见
         if (isVisible()) {
             // 距离50像素

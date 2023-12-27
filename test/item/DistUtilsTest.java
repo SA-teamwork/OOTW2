@@ -14,6 +14,7 @@ public class DistUtilsTest extends TestCase {
     public void setUp() throws Exception {
         super.setUp();
         distUtils = new DistUtils();
+
     }
 
     public void tearDown() {
