@@ -49,9 +49,9 @@ public abstract class VillagersTemplete extends Unit implements PlayerChatObserv
     @Override
     public void render(Graphics g) {
         super.render(g);
-        // 绘制状态指示图标（头上方显示角色名字和健康值）
+        // 繪製狀態指示圖示（頭上方顯示角色名字和健康值）
         drawNameBar(g);
-        // 交谈
+        // 交談
         if (chatvisible) {
             drawChat(g);
         }
@@ -77,11 +77,11 @@ public abstract class VillagersTemplete extends Unit implements PlayerChatObserv
     @Override
     public void update(World world, int dir_x, int dir_y, int delta) {
         super.update(world, dir_x, dir_y, delta);
-        // 如果正在会话，则计时。
+        // 如果正在會話，則計時。
         if (chatvisible) {
             chatperiod += delta;
             long seconds = chatperiod / 1000;
-            if (seconds >= 4) {// 大于4秒结束对话
+            if (seconds >= 4) {// 大於4秒結束對話
                 chatvisible = false;
                 chatperiod = 0L;
             }
@@ -90,13 +90,13 @@ public abstract class VillagersTemplete extends Unit implements PlayerChatObserv
 
     @Override
     public void chatAction(Player player, double posx, double posy, double delta) {
-        // 检查player距离是否在50像素之内
+        // 檢查player距離是否在50像素之內
         double dist = DistUtils.dist(posx, posy, this.getPosx(), this.getPosy());
-        // 距离小于50像素
+        // 距離小於50像素
         if (dist <= 50) {
-            // 确定交谈内容
+            // 確定交談內容
             chat = vp.chat(player);
-            // 显示会话
+            // 顯示會話
             chatvisible = true;
         }
 

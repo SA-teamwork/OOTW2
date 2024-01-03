@@ -34,7 +34,7 @@ public class UnitsData {
             }
         } catch (Exception e) {
             e.printStackTrace();
-            System.out.println("读取 " + path + " 文件出错." + e.getMessage());
+            System.out.println("讀取 " + path + " 文件出錯." + e.getMessage());
         }
     }
 

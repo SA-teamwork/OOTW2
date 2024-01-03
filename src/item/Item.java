@@ -109,9 +109,9 @@ public class Item implements PlayerMoveObserver {
         if (player == null) {
             throw new NullPointerException("player Can NOT be 'null'");
         }
-        // 如果物品可见
+        // 如果物品可見
         if (isVisible()) {
-            // 距离50像素
+            // 距離50像素
             double dist = DistUtils.dist(posx, posy, this.posx, this.posy);
             if (dist <= 20) {
                 System.out.println("pick!!");
